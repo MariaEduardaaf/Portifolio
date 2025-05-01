@@ -1,0 +1,37 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "language": {
+        "select": "Select language"
+    },
+    "hero": {
+        "welcome": "Welcome to my Portfolio",
+        "name": "Eduarda Alves",
+        "role": "FullStack Developer",
+        "scroll": "Scroll to bottom"
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle": "Hi, I’m Duda",
+        "description": "Versatile and adaptable professional with strong communication skills and interpersonal abilities...",
+        "download": "Download CV",
+        "skillsTitle": "Skills",
+        "timelineTitle": "My Timeline"
+    },
+    "projects": {
+        "title": "Some Projects"
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "message": "Message",
+        "service": "Service",
+        "send": "Send Message"
+    }
+}

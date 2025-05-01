@@ -1,0 +1,37 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "Sobre",
+        "projects": "Projetos",
+        "contact": "Contato"
+    },
+    "language": {
+        "select": "Selecione o idioma"
+    },
+    "hero": {
+        "welcome": "Bem‐vinda(o) ao meu Portfólio",
+        "name": "Eduarda Alves",
+        "role": "Desenvolvedora FullStack",
+        "scroll": "Rolar até o fim"
+    },
+    "about": {
+        "title": "Sobre Mim",
+        "subtitle": "Olá, eu sou a Duda",
+        "description": "Profissional versátil e adaptável, com forte capacidade de comunicação e habilidades interpessoais...",
+        "download": "Baixar CV",
+        "skillsTitle": "Habilidades",
+        "timelineTitle": "Minha timeline"
+    },
+    "projects": {
+        "title": "Alguns projetos"
+    },
+    "contact": {
+        "title": "Me contacte",
+        "firstName": "Primeiro Nome",
+        "lastName": "Último Nome",
+        "email": "Email",
+        "message": "Mensagem",
+        "service": "Serviço",
+        "send": "Enviar mensagem"
+    }
+}
