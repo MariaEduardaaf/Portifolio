@@ -147,7 +147,7 @@ This is a personal portfolio project, but feedback and suggestions are welcome! 
 
 - 💼 **LinkedIn**: [Professional Profile](https://www.linkedin.com/in/eduardaalvesfr/)
 - 🐙 **GitHub**: [@MariaEduardaaf](https://github.com/MariaEduardaaf)
-- 📧 **Email**: madualvesfr@gmail.com
+- 📧 **Email**: madualvesfr@icloud.com
 - 📱 **Portfolio**: [Live Demo](https://your-portfolio-url.com)
 
 ## 📄 License
