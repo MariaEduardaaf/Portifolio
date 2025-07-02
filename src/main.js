@@ -48,8 +48,10 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 import pt from './locales/pt.json'
 import en from './locales/en.json'
 import es from './locales/es.json'
+import ru from './locales/ru.json'
+import de from './locales/de.json'
 
-const messages = { pt, en, es }
+const messages = { pt, en, es, ru, de }
 const savedLocale = localStorage.getItem('locale') || 'en'
 
 const i18n = createI18n({

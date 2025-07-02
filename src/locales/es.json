@@ -10,20 +10,38 @@
     },
     "hero": {
         "welcome": "Bienvenido a mi Portafolio",
-        "name": "Eduarda Alves",
-        "role": "Desarrolladora FullStack",
+        "name": "Maria Eduarda Alves Freire",
+        "role": "Desarrolladora Full Stack",
         "scroll": "Desplazar hasta el final"
     },
     "about": {
         "title": "Sobre Mí",
         "subtitle": "Hola, soy Duda",
-        "description": "Profesional versátil y adaptable, con fuertes habilidades de comunicación y habilidades interpersonales...",
+        "description": "Desarrolladora Full Stack con 3 años de experiencia en desarrollo frontend y backend, especializada en Flutter, Vue.js y Node.js. Busco aplicar mis habilidades técnicas en un ambiente innovador, contribuyendo a proyectos desafiantes y centrados en el usuario. Profesional versátil y adaptable con fuertes habilidades de comunicación e interpersonales.",
         "download": "Descargar CV",
         "skillsTitle": "Habilidades",
-        "timelineTitle": "Mi Línea de Tiempo"
+        "timelineTitle": "Mi Trayectoria"
     },
     "projects": {
-        "title": "Algunos Proyectos"
+        "title": "Mis Proyectos",
+        "enemninja": {
+            "description": "Aplicación móvil para preparación del ENEM con Flutter y Firebase"
+        },
+        "zapfacil": {
+            "description": "Aplicación SaaS para gestión de comunicación en PyMEs con Vue.js y PostgreSQL"
+        },
+        "gerenciamei": {
+            "description": "Blog personalizado en WordPress con diseño responsivo y SEO optimizado"
+        },
+        "snaprix": {
+            "description": "Juego de Tetris moderno y divertido desarrollado en Flutter/Flame"
+        },
+        "playlistporter": {
+            "description": "Sitio web moderno y responsivo para promocionar la app PlaylistPorter"
+        },
+        "foodspot": {
+            "description": "Aplicación móvil para descubrir y calificar restaurantes"
+        }
     },
     "contact": {
         "title": "Contáctame",

@@ -1,0 +1,55 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "about": "Über mich",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "language": {
+        "select": "Sprache auswählen"
+    },
+    "hero": {
+        "welcome": "Willkommen zu meinem Portfolio",
+        "name": "Maria Eduarda Alves Freire",
+        "role": "Full Stack Entwicklerin",
+        "scroll": "Bis zum Ende scrollen"
+    },
+    "about": {
+        "title": "Über mich",
+        "subtitle": "Hallo, ich bin Duda",
+        "description": "Full Stack Entwicklerin mit 3 Jahren Erfahrung in Frontend- und Backend-Entwicklung, spezialisiert auf Flutter, Vue.js und Node.js. Ich möchte meine technischen Fähigkeiten in einem innovativen Umfeld einsetzen und zu herausfordernden, benutzerorientierten Projekten beitragen. Vielseitiger und anpassungsfähiger Profi mit starken Kommunikations- und zwischenmenschlichen Fähigkeiten.",
+        "download": "Lebenslauf herunterladen",
+        "skillsTitle": "Fähigkeiten",
+        "timelineTitle": "Mein Werdegang"
+    },
+    "projects": {
+        "title": "Meine Projekte",
+        "enemninja": {
+            "description": "Mobile App für ENEM-Vorbereitung mit Flutter und Firebase"
+        },
+        "zapfacil": {
+            "description": "SaaS-Anwendung für Kommunikationsmanagement in KMUs mit Vue.js und PostgreSQL"
+        },
+        "gerenciamei": {
+            "description": "Personalisierter WordPress-Blog mit responsivem Design und SEO-Optimierung"
+        },
+        "snaprix": {
+            "description": "Modernes und lustiges Tetris-Spiel entwickelt in Flutter/Flame"
+        },
+        "playlistporter": {
+            "description": "Moderne und responsive Website zur Bewerbung der PlaylistPorter App"
+        },
+        "foodspot": {
+            "description": "Mobile App zum Entdecken und Bewerten von Restaurants"
+        }
+    },
+    "contact": {
+        "title": "Kontaktieren Sie mich",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "E-Mail",
+        "message": "Nachricht",
+        "service": "Service",
+        "send": "Nachricht senden"
+    }
+}

@@ -53,6 +53,18 @@
         >
           Español
         </button>
+        <button
+          @click="setLocale('ru')"
+          :class="btnClass('ru')"
+        >
+          Русский
+        </button>
+        <button
+          @click="setLocale('de')"
+          :class="btnClass('de')"
+        >
+          Deutsch
+        </button>
       </div>
     </div>
   </div>

@@ -10,20 +10,49 @@
     },
     "hero": {
         "welcome": "Welcome to my Portfolio",
-        "name": "Eduarda Alves",
-        "role": "FullStack Developer",
+        "name": "Madu Alves",
+        "role": "Full Stack Developer",
         "scroll": "Scroll to bottom"
     },
     "about": {
         "title": "About Me",
         "subtitle": "Hi, I’m Duda",
-        "description": "Versatile and adaptable professional with strong communication skills and interpersonal abilities...",
+        "description": "Full Stack Developer with 3 years of experience in frontend and backend development, specialized in Flutter, Vue.js and Node.js. I seek to apply my technical skills in an innovative environment, contributing to challenging and user-centered projects. Versatile and adaptable professional with strong communication and interpersonal skills.",
         "download": "Download CV",
         "skillsTitle": "Skills",
-        "timelineTitle": "My Timeline"
+        "timelineTitle": "My Journey"
     },
     "projects": {
-        "title": "Some Projects"
+        "title": "My Projects",
+        "loading": "Loading project...",
+        "technologies": "Technologies Used",
+        "features": "Key Features",
+        "challenges": "Technical Challenges",
+        "learnings": "Key Learnings",
+        "viewCode": "View Code",
+        "viewLive": "View Live",
+        "companyProject": "Company Project",
+        "enemninja": {
+            "description": "Mobile app for ENEM preparation with Flutter and Firebase"
+        },
+        "zapfacil": {
+            "description": "SaaS application for communication management in SMEs with Vue.js and PostgreSQL"
+        },
+        "gerenciamei": {
+            "description": "Custom WordPress blog with responsive design and SEO optimization"
+        },
+        "snaprix": {
+            "description": "Modern and fun Tetris game developed in Flutter/Flame"
+        },
+        "playlistporter": {
+            "description": "Modern and responsive website to promote PlaylistPorter app"
+        },
+        "foodspot": {
+            "description": "Mobile app to discover and rate restaurants"
+        }
+    },
+    "navigation": {
+        "back": "Back to Projects"
     },
     "contact": {
         "title": "Get in Touch",

@@ -10,20 +10,38 @@
     },
     "hero": {
         "welcome": "Bem‐vinda(o) ao meu Portfólio",
-        "name": "Eduarda Alves",
-        "role": "Desenvolvedora FullStack",
+        "name": "Madu Alves",
+        "role": "Desenvolvedora Full Stack",
         "scroll": "Rolar até o fim"
     },
     "about": {
         "title": "Sobre Mim",
         "subtitle": "Olá, eu sou a Duda",
-        "description": "Profissional versátil e adaptável, com forte capacidade de comunicação e habilidades interpessoais...",
+        "description": "Desenvolvedora Full Stack com 3 anos de experiência em desenvolvimento frontend e backend, especializada em Flutter, Vue.js e Node.js. Busco aplicar minhas habilidades técnicas em um ambiente inovador, contribuindo para projetos desafiadores e centrados no usuário. Profissional versátil e adaptável, com forte capacidade de comunicação e habilidades interpessoais.",
         "download": "Baixar CV",
         "skillsTitle": "Habilidades",
-        "timelineTitle": "Minha timeline"
+        "timelineTitle": "Minha Jornada"
     },
     "projects": {
-        "title": "Alguns projetos"
+        "title": "Meus Projetos",
+        "enemninja": {
+            "description": "Aplicativo móvel para preparação do ENEM com Flutter e Firebase"
+        },
+        "zapfacil": {
+            "description": "Aplicação SaaS para gestão de comunicação em PMEs com Vue.js e PostgreSQL"
+        },
+        "gerenciamei": {
+            "description": "Blog personalizado em WordPress com design responsivo e SEO otimizado"
+        },
+        "snaprix": {
+            "description": "Jogo de Tetris moderno e divertido desenvolvido em Flutter/Flame"
+        },
+        "playlistporter": {
+            "description": "Website moderno e responsivo para divulgar o app PlaylistPorter"
+        },
+        "foodspot": {
+            "description": "Aplicativo móvel para descobrir e avaliar restaurantes"
+        }
     },
     "contact": {
         "title": "Me contacte",

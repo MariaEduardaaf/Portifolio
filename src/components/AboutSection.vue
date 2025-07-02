@@ -10,23 +10,23 @@
             <div class="flex flex-col items-start lg:w-1/2 space-y-6 text-gray-700 dark:text-gray-200">
                 <div class="max-w-md w-full flex flex-col items-center space-y-6">
                     <div class="w-48 h-48 rounded-full overflow-hidden shadow-md">
-                        <img src="https://i.pinimg.com/736x/56/67/c2/5667c2fc07fc8eaa0d9fd6f75d973e80.jpg"
+                        <img :src="perfilImg"
                             alt="Foto da Duda" class="w-full h-full object-cover" />
                     </div>
                     <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 text-center">
                         {{ t('about.subtitle') }}
                     </h2>
-                    <div class="flex space-x-4 justify-center w-full">
-                        <button
+                    <div class="flex flex-wrap gap-2 justify-center w-full">
+                        <a href="https://www.linkedin.com/in/eduardaalvesfr/" target="_blank"
                             class="group bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded-lg flex items-center gap-2 transition-all hover:scale-105 hover:text-purple-600">
                             <font-awesome-icon :icon="['fab', 'linkedin']" class="text-purple-600" />
                             Linkedin
-                        </button>
-                        <button
+                        </a>
+                        <a href="https://github.com/MariaEduardaaf" target="_blank"
                             class="group bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded-lg flex items-center gap-2 transition-all hover:scale-105 hover:text-purple-600">
                             <font-awesome-icon :icon="['fab', 'github']" class="text-purple-600" />
                             Github
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <p class="leading-relaxed text-sm max-w-md">
@@ -101,26 +101,28 @@
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import perfilImg from '../assets/img/perfil.png'
 
 const { t } = useI18n()
 
 const skills = [
-    { name: 'Tailwind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg' },
+    { name: 'Vue.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
     { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
     { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
-    { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg' },
     { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-    { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-    { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-    { name: 'Vue.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' }
+    { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+    { name: 'Tailwind', icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg' },
+    { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+    { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' }
 ]
 
 const timeline = [
-    { periodo: '2018 - 2020', title: 'Nome da escola do médio', local: 'Espanha' },
-    { periodo: '2020 - 2024', title: 'Nome da Universidade', local: 'Remoto' },
-    { periodo: '2021 - 2022', title: 'Primeira empresa', local: 'Remoto' },
-    { periodo: '2022 - 2023', title: 'Segunda empresa', local: 'Remoto' },
-    { periodo: '2023 - Atual', title: 'Terceira empresa', local: 'Remoto' }
+    { periodo: '2021 - 2023', title: 'Curso Completo de HTML & JavaScript', local: 'Curso em Vídeo' },
+    { periodo: '2021 - 2022', title: 'Desenvolvedora Front End - Next', local: 'Remoto' },
+    { periodo: '2022 - 2023', title: 'Connect and Build Foundations (Fullstack)', local: 'Rocketseat' },
+    { periodo: '2023', title: 'Desenvolvedora Full Stack - Freelancer', local: 'Remoto' },
+    { periodo: '2023 - 2024', title: 'Desenvolvedora Full Stack - Grupo Genneration', local: 'Remoto' },
+    { periodo: '2024', title: 'Inglês (B2)', local: 'Oxford, Malta' }
 ]
 
 const grid = ref(null)
