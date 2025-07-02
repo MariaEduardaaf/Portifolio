@@ -145,7 +145,7 @@ This is a personal portfolio project, but feedback and suggestions are welcome! 
 
 **Madu Alves** - Full Stack Developer
 
-- 💼 **LinkedIn**: [Professional Profile](https://linkedin.com/in/your-linkedin)
+- 💼 **LinkedIn**: [Professional Profile](https://www.linkedin.com/in/eduardaalvesfr/)
 - 🐙 **GitHub**: [@MariaEduardaaf](https://github.com/MariaEduardaaf)
 - 📧 **Email**: your.email@example.com
 - 📱 **Portfolio**: [Live Demo](https://your-portfolio-url.com)
