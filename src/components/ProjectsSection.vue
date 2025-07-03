@@ -23,14 +23,21 @@
                         <img v-if="project.image" 
                              :src="getImageUrl(project.image)" 
                              :alt="project.title"
-                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                             :class="project.isAppIcon 
+                                 ? 'w-24 h-24 object-cover rounded-2xl mx-auto mt-8 shadow-lg transition-transform duration-300 group-hover:scale-110' 
+                                 : 'w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'"
                              @error="handleImageError($event, project)">
                         
-                        <img v-else-if="project.liveUrl" 
+                        <img v-else-if="project.liveUrl && !project.iconEmoji" 
                              :src="getScreenshotUrl(project.liveUrl)" 
                              :alt="project.title + ' preview'"
                              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
                              @error="handleImageError($event, project)">
+                        
+                        <div v-else-if="project.iconEmoji" 
+                             class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-800 dark:to-purple-900">
+                            <div class="text-5xl mb-2">{{ project.iconEmoji }}</div>
+                        </div>
                         
                         <div v-else class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-800 dark:to-purple-900">
                             <font-awesome-icon :icon="['fas', 'code']" class="text-4xl text-purple-600 dark:text-purple-300" />
@@ -184,44 +191,48 @@ const projects = ref([
     { 
         id: 7, 
         title: 'Cartões Fácil', 
-        shortDescription: 'Assistente para comparar e escolher cartões de crédito com recomendações personalizadas', 
+        shortDescription: 'Assistente para comparar e escolher cartões de crédito', 
         tags: ['Flutter', 'Firebase'], 
         githubUrl: null, 
         liveUrl: 'https://apps.apple.com/br/app/cart%C3%A3o-f%C3%A1cil/id1251949878',
-        image: null,
-        isAppStore: true
+        image: 'https://play-lh.googleusercontent.com/m_NB3ZjECKAScPBKafXGo0oHbeBSHrTGflxi-NFcTS_OL2aNScFDuLVZoJtndRnjpG0F=w480-h960-rw',
+        isAppStore: true,
+        isAppIcon: true
     },
     { 
         id: 8, 
         title: 'Jogo da Bíblia: Estudo Diário', 
-        shortDescription: 'App de quiz bíblico com sistema de pontuação e ranking diário', 
+        shortDescription: 'Quiz bíblico com ranking e gamificação', 
         tags: ['Flutter', 'Firebase'], 
         githubUrl: null, 
         liveUrl: 'https://apps.apple.com/es/app/jogo-da-b%C3%ADblia-estudo-di%C3%A1rio/id6463932846',
-        image: null,
-        isAppStore: true
+        image: 'https://play-lh.googleusercontent.com/4KIygsh_v1cmEjw4c5E-sDfXoKgna7CGluAtldQZsFqrelqJHw6SRLu24GQexFFP5J62=w480-h960',
+        isAppStore: true,
+        isAppIcon: true
     },
     { 
         id: 9, 
         title: 'CaloTrack: Monitor de Calorias', 
-        shortDescription: 'App de nutrição com análise por IA e planejamento alimentar', 
+        shortDescription: 'App de nutrição com análise por IA e plano alimentar', 
         tags: ['Flutter', 'Firebase', 'AI'], 
         githubUrl: null, 
         liveUrl: 'https://apps.apple.com/es/app/calotrack-monitor-de-calorias/id6463879811',
-        image: null,
-        isAppStore: true
+        image: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c5/03/31/c503312c-d83a-af79-a803-9f154c85f47e/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/1024x1024bb.png',
+        isAppStore: true,
+        isAppIcon: true
     },
-    // Outros projetos
     { 
         id: 1, 
         title: 'Enem Ninja', 
-        shortDescription: 'App educacional gamificado para preparação do ENEM', 
-        tags: ['Flutter', 'Dart', 'Firebase'], 
+        shortDescription: 'App educacional com simulados e gamificação para ENEM', 
+        tags: ['Flutter', 'Firebase'], 
         githubUrl: '#', 
         liveUrl: 'https://apps.apple.com/es/app/enem-ninja/id6478286547',
-        image: '/projects/enem-ninja.svg',
-        isAppStore: true
+        image: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/40/95/1b/40951bbe-7b2a-84bc-c40b-298d4c1161cf/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/1024x1024bb.png',
+        isAppStore: true,
+        isAppIcon: true
     },
+    // Outros projetos
     { 
         id: 2, 
         title: 'ZapFácil', 
@@ -229,16 +240,17 @@ const projects = ref([
         tags: ['Vue', 'TypeScript', 'PostgreSQL'], 
         githubUrl: '#', 
         liveUrl: 'https://www.zapfacil.com',
-        image: null
+        iconEmoji: '⚡'
     },
     { 
         id: 3, 
-        title: 'Gerenciamei', 
-        shortDescription: 'Blog WordPress especializado em gestão para MEI', 
+        title: 'GerenciaMEI', 
+        shortDescription: 'Plataforma para emissão de notas e controle de MEI', 
         tags: ['WordPress', 'JavaScript', 'SEO'], 
         githubUrl: '#', 
         liveUrl: 'https://solicitar.gerenciamei.com',
-        image: null
+        image: 'https://play-lh.googleusercontent.com/E5zhNMUB5DIQbHwBA5m49nfoLo09xj_e4wxwBVW_2RcW4HEaXmkHtl8E6xz7bXbWPN0=w480-h960',
+        isAppIcon: true
     },
     { 
         id: 4, 
@@ -247,7 +259,7 @@ const projects = ref([
         tags: ['Flutter', 'Dart', 'Game'], 
         githubUrl: 'https://github.com/MariaEduardaaf/Snaprix', 
         liveUrl: null,
-        image: '/projects/snaprix.svg'
+        iconEmoji: '🎮'
     },
     { 
         id: 5, 
@@ -256,7 +268,7 @@ const projects = ref([
         tags: ['HTML', 'JavaScript', 'CSS'], 
         githubUrl: 'https://github.com/MariaEduardaaf/playlistporter-website', 
         liveUrl: 'https://playlistporter-website.vercel.app',
-        image: null
+        iconEmoji: '🎵'
     },
     { 
         id: 6, 
@@ -265,7 +277,7 @@ const projects = ref([
         tags: ['Flutter', 'Dart', 'Mobile'], 
         githubUrl: 'https://github.com/MariaEduardaaf/foodspot', 
         liveUrl: null,
-        image: '/projects/foodspot.svg'
+        iconEmoji: '🍕'
     }
 ])
 </script>
