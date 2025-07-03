@@ -6,14 +6,14 @@
                 {{ t('contact.title') }}
             </h1>
 
-            <form @submit.prevent="submitForm"
+            <form action="https://formspree.io/f/xvgryqog" method="POST"
                 class="contact-card group bg-white dark:bg-gray-800 p-10 rounded-xl shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                 <div class="grid grid-cols-2 gap-4 animate-slide-up">
                     <div>
                         <label class="block font-medium mb-2 text-gray-800 dark:text-gray-200">
                             {{ t('contact.firstName') }}
                         </label>
-                        <input type="text" :placeholder="t('contact.firstName')" v-model="form.firstName" required
+                        <input type="text" name="firstName" :placeholder="t('contact.firstName')" required
                             class="w-full border-2 border-gray-300 dark:border-gray-500 rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 transition duration-300 ease-in-out hover:border-gray-400 dark:hover:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100" />
                     </div>
 
@@ -21,7 +21,7 @@
                         <label class="block font-medium mb-2 text-gray-800 dark:text-gray-200">
                             {{ t('contact.lastName') }}
                         </label>
-                        <input type="text" :placeholder="t('contact.lastName')" v-model="form.lastName" required
+                        <input type="text" name="lastName" :placeholder="t('contact.lastName')" required
                             class="w-full border-2 border-gray-300 dark:border-gray-500 rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 transition duration-300 ease-in-out hover:border-gray-400 dark:hover:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100" />
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <label class="block font-medium mb-2 text-gray-800 dark:text-gray-200">
                         {{ t('contact.email') }}
                     </label>
-                    <input type="email" :placeholder="t('contact.email')" v-model="form.email" required
+                    <input type="email" name="email" :placeholder="t('contact.email')" required
                         class="w-full border-2 border-gray-300 dark:border-gray-500 rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 transition duration-300 ease-in-out hover:border-gray-400 dark:hover:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100" />
                 </div>
 
@@ -38,7 +38,7 @@
                     <label class="block font-medium mb-2 text-gray-800 dark:text-gray-200">
                         {{ t('contact.message') }}
                     </label>
-                    <textarea :placeholder="t('contact.message')" v-model="form.message" required
+                    <textarea name="message" :placeholder="t('contact.message')" required
                         class="w-full h-32 resize-none border-2 border-gray-300 dark:border-gray-500 rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500 dark:focus:border-purple-400 transition duration-300 ease-in-out hover:border-gray-400 dark:hover:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100"></textarea>
                 </div>
 
@@ -48,7 +48,7 @@
                     </label>
                     <div class="grid grid-cols-3 gap-2">
                         <label class="cursor-pointer">
-                            <input type="checkbox" value="Frontend" v-model="form.services" @change="updateServices"
+                            <input type="radio" name="service" value="Frontend" checked
                                 class="hidden peer" />
                             <span
                                 class="block w-full text-center py-2 border-2 border-gray-300 dark:border-gray-500 rounded-full peer-checked:bg-purple-600 peer-checked:text-white transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:border-gray-600">
@@ -56,7 +56,7 @@
                             </span>
                         </label>
                         <label class="cursor-pointer">
-                            <input type="checkbox" value="Backend" v-model="form.services" @change="updateServices"
+                            <input type="radio" name="service" value="Backend"
                                 class="hidden peer" />
                             <span
                                 class="block w-full text-center py-2 border-2 border-gray-300 dark:border-gray-500 rounded-full peer-checked:bg-purple-600 peer-checked:text-white transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:border-gray-600">
@@ -64,7 +64,7 @@
                             </span>
                         </label>
                         <label class="cursor-pointer">
-                            <input type="checkbox" value="Fullstack" v-model="form.services" @change="updateServices"
+                            <input type="radio" name="service" value="Fullstack"
                                 class="hidden peer" />
                             <span
                                 class="block w-full text-center py-2 border-2 border-gray-300 dark:border-gray-500 rounded-full peer-checked:bg-purple-600 peer-checked:text-white transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:border-gray-600">
@@ -84,39 +84,9 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-
-const form = reactive({
-    firstName: '',
-    lastName: '',
-    email: '',
-    message: '',
-    services: [],
-})
-
-function updateServices() {
-    if (form.services.includes('Frontend') && form.services.includes('Backend')) {
-        form.services = ['Fullstack']
-    } else if (
-        form.services.includes('Fullstack') &&
-        (form.services.includes('Frontend') || form.services.includes('Backend'))
-    ) {
-        form.services = form.services.filter((s) => s !== 'Fullstack')
-    }
-}
-
-function submitForm() {
-    alert(
-        `${t('contact.title')}!\n` +
-        `${t('contact.firstName')}: ${form.firstName} ${form.lastName}\n` +
-        `${t('contact.email')}: ${form.email}\n` +
-        `${t('contact.service')}: ${form.services.join(', ')}\n` +
-        `${t('contact.message')}: ${form.message}`
-    )
-}
 </script>
 
 <style scoped>
