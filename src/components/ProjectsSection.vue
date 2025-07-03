@@ -24,8 +24,9 @@
                              class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-800 dark:to-purple-900">
                             <img :src="getImageUrl(project.image)" 
                                  :alt="project.altText || project.title"
-                                 class="w-40 h-auto transition-transform duration-300 group-hover:scale-105"
-                                 @error="handleImageError($event, project)">
+                                 :class="project.id === 4 ? 'w-40 h-auto transition-transform duration-300 group-hover:scale-105' : 'w-40 h-auto transition-transform duration-300 group-hover:scale-105'"
+                                 @error="handleImageError($event, project)"
+                                 :style="project.id === 4 ? 'width: 160px; height: auto;' : ''">
                         </div>
                         
                         <img v-else-if="project.image" 
@@ -271,7 +272,9 @@ const projects = ref([
         tags: ['Flutter', 'Dart', 'Game'], 
         githubUrl: 'https://github.com/MariaEduardaaf/Snaprix', 
         liveUrl: null,
-        iconEmoji: '🎮'
+        image: '/src/snaprix.png',
+        altText: 'Logo do aplicativo Snaprix',
+        isLogo: true
     },
     { 
         id: 5, 
