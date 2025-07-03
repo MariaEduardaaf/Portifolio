@@ -219,7 +219,8 @@ const projects = ref([
         tags: ['Flutter', 'Dart', 'Firebase'], 
         githubUrl: '#', 
         liveUrl: 'https://apps.apple.com/es/app/enem-ninja/id6478286547',
-        image: '/projects/enem-ninja.svg'
+        image: '/projects/enem-ninja.svg',
+        isAppStore: true
     },
     { 
         id: 2, 
