@@ -64,12 +64,12 @@
                         <div class="space-y-3">
                             <!-- Título -->
                             <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
-                                {{ project.title }}
+                                {{ t(`projects.items.${project.titleKey}.title`) }}
                             </h3>
 
                             <!-- Descrição curta -->
                             <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed">
-                                {{ project.shortDescription }}
+                                {{ t(`projects.items.${project.titleKey}.description`) }}
                             </p>
 
                             <!-- Tecnologias -->
@@ -208,8 +208,7 @@ const projects = ref([
     // Projetos da App Store em destaque
     { 
         id: 7, 
-        title: 'Cartões Fácil', 
-        shortDescription: 'Assistente para comparar e escolher cartões de crédito', 
+        titleKey: 'cartoesFacil',
         tags: ['Flutter', 'Firebase'], 
         githubUrl: null, 
         liveUrl: 'https://apps.apple.com/br/app/cart%C3%A3o-f%C3%A1cil/id1251949878',
@@ -219,8 +218,7 @@ const projects = ref([
     },
     { 
         id: 8, 
-        title: 'Jogo da Bíblia: Estudo Diário', 
-        shortDescription: 'Quiz bíblico com ranking e gamificação', 
+        titleKey: 'jogoBiblia',
         tags: ['Flutter', 'Firebase'], 
         githubUrl: null, 
         liveUrl: 'https://apps.apple.com/es/app/jogo-da-b%C3%ADblia-estudo-di%C3%A1rio/id6463932846',
@@ -230,8 +228,7 @@ const projects = ref([
     },
     { 
         id: 9, 
-        title: 'CaloTrack: Monitor de Calorias', 
-        shortDescription: 'App de nutrição com análise por IA e plano alimentar', 
+        titleKey: 'caloTrack',
         tags: ['Flutter', 'Firebase', 'AI'], 
         githubUrl: null, 
         liveUrl: 'https://apps.apple.com/es/app/calotrack-monitor-de-calorias/id6463879811',
@@ -241,8 +238,7 @@ const projects = ref([
     },
     { 
         id: 1, 
-        title: 'Enem Ninja', 
-        shortDescription: 'App educacional com simulados e gamificação para ENEM', 
+        titleKey: 'enemNinja',
         tags: ['Flutter', 'Firebase'], 
         githubUrl: '#', 
         liveUrl: 'https://apps.apple.com/es/app/enem-ninja/id6478286547',
@@ -253,8 +249,7 @@ const projects = ref([
     // Outros projetos
     { 
         id: 2, 
-        title: 'ZapFácil', 
-        shortDescription: 'Aplicativo de gestão de contatos e automação de mensagens via WhatsApp voltado para empresas', 
+        titleKey: 'zapFacil',
         tags: ['Flutter', 'Firebase', 'REST API'], 
         githubUrl: '#', 
         liveUrl: 'https://www.zapfacil.com',
@@ -265,8 +260,7 @@ const projects = ref([
     },
     { 
         id: 3, 
-        title: 'GerenciaMEI', 
-        shortDescription: 'Plataforma para emissão de notas e controle de MEI', 
+        titleKey: 'gerenciaMei',
         tags: ['WordPress', 'JavaScript', 'SEO'], 
         githubUrl: '#', 
         liveUrl: 'https://solicitar.gerenciamei.com',
@@ -275,8 +269,7 @@ const projects = ref([
     },
     { 
         id: 4, 
-        title: 'Snaprix', 
-        shortDescription: 'Jogo mobile viciante estilo Tetris', 
+        titleKey: 'snaprix',
         tags: ['Flutter', 'Dart', 'Game'], 
         githubUrl: 'https://github.com/MariaEduardaaf/Snaprix', 
         liveUrl: null,
@@ -286,8 +279,7 @@ const projects = ref([
     },
     { 
         id: 5, 
-        title: 'PlaylistPorter Website', 
-        shortDescription: 'Landing page responsiva para transferência de playlists', 
+        titleKey: 'playlistPorter',
         tags: ['HTML', 'JavaScript', 'CSS'], 
         githubUrl: 'https://github.com/MariaEduardaaf/playlistporter-website', 
         liveUrl: 'https://playlistporter-website.vercel.app',
@@ -297,8 +289,7 @@ const projects = ref([
     },
     { 
         id: 6, 
-        title: 'PetCare Platform', 
-        shortDescription: 'Plataforma web para adoção e cuidados de pets', 
+        titleKey: 'petCare',
         tags: ['HTML', 'CSS', 'JavaScript'], 
         githubUrl: 'https://github.com/MariaEduardaaf/projeto-doguinho', 
         liveUrl: 'https://projeto-doguinho.vercel.app',

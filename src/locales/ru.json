@@ -36,6 +36,44 @@
         },
         "status": {
             "inDevelopment": "В разработке"
+        },
+        "items": {
+            "cartoesFacil": {
+                "title": "Легкие Карты",
+                "description": "Помощник для сравнения и выбора кредитных карт"
+            },
+            "jogoBiblia": {
+                "title": "Игра Библия: Ежедневное Изучение",
+                "description": "Библейская викторина с рейтингом и геймификацией"
+            },
+            "caloTrack": {
+                "title": "CaloTrack: Монитор Калорий",
+                "description": "Приложение для питания с анализом ИИ и планом питания"
+            },
+            "enemNinja": {
+                "title": "Enem Ninja",
+                "description": "Образовательное приложение с симуляторами и геймификацией для ENEM"
+            },
+            "zapFacil": {
+                "title": "ZapFácil",
+                "description": "Приложение для управления контактами и автоматизации сообщений WhatsApp для бизнеса"
+            },
+            "gerenciaMei": {
+                "title": "УправлениеMEI",
+                "description": "Платформа для выставления счетов и контроля MEI"
+            },
+            "snaprix": {
+                "title": "Snaprix",
+                "description": "Захватывающая мобильная игра в стиле Тетрис"
+            },
+            "playlistPorter": {
+                "title": "PlaylistPorter Website",
+                "description": "Адаптивная целевая страница для передачи плейлистов"
+            },
+            "petCare": {
+                "title": "PetCare Platform",
+                "description": "Веб-платформа для усыновления и ухода за питомцами"
+            }
         }
     },
     "timeline": {

@@ -36,6 +36,44 @@
         },
         "status": {
             "inDevelopment": "En desarrollo"
+        },
+        "items": {
+            "cartoesFacil": {
+                "title": "Tarjetas Fácil",
+                "description": "Asistente para comparar y elegir tarjetas de crédito"
+            },
+            "jogoBiblia": {
+                "title": "Juego de la Biblia: Estudio Diario",
+                "description": "Quiz bíblico con ranking y gamificación"
+            },
+            "caloTrack": {
+                "title": "CaloTrack: Monitor de Calorías",
+                "description": "App de nutrición con análisis por IA y plan alimentario"
+            },
+            "enemNinja": {
+                "title": "Enem Ninja",
+                "description": "App educativa con simulacros y gamificación para ENEM"
+            },
+            "zapFacil": {
+                "title": "ZapFácil",
+                "description": "Aplicación de gestión de contactos y automatización de mensajes vía WhatsApp para empresas"
+            },
+            "gerenciaMei": {
+                "title": "GestionaMEI",
+                "description": "Plataforma para emisión de facturas y control de MEI"
+            },
+            "snaprix": {
+                "title": "Snaprix",
+                "description": "Juego móvil adictivo estilo Tetris"
+            },
+            "playlistPorter": {
+                "title": "PlaylistPorter Website",
+                "description": "Landing page responsiva para transferencia de playlists"
+            },
+            "petCare": {
+                "title": "PetCare Platform",
+                "description": "Plataforma web para adopción y cuidado de mascotas"
+            }
         }
     },
     "timeline": {
