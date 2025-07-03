@@ -272,12 +272,12 @@ const projects = ref([
     },
     { 
         id: 6, 
-        title: 'FoodSpot', 
-        shortDescription: 'App de delivery de comida com interface moderna', 
-        tags: ['Flutter', 'Dart', 'Mobile'], 
-        githubUrl: 'https://github.com/MariaEduardaaf/foodspot', 
-        liveUrl: null,
-        iconEmoji: '🍕'
+        title: 'Projeto Doguinho', 
+        shortDescription: 'Plataforma web para adoção e cuidados de pets', 
+        tags: ['HTML', 'CSS', 'JavaScript'], 
+        githubUrl: 'https://github.com/MariaEduardaaf/projeto-doguinho', 
+        liveUrl: 'https://projeto-doguinho.vercel.app',
+        iconEmoji: '🐶'
     }
 ])
 </script>
