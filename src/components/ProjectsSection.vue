@@ -272,7 +272,7 @@ const projects = ref([
     },
     { 
         id: 6, 
-        title: 'Projeto Doguinho', 
+        title: 'PetCare Platform', 
         shortDescription: 'Plataforma web para adoção e cuidados de pets', 
         tags: ['HTML', 'CSS', 'JavaScript'], 
         githubUrl: 'https://github.com/MariaEduardaaf/projeto-doguinho', 
