@@ -117,12 +117,10 @@ const skills = [
 ]
 
 const timeline = [
-    { periodo: '2021 - 2023', title: 'Curso Completo de HTML & JavaScript', local: 'Curso em Vídeo' },
-    { periodo: '2021 - 2022', title: 'Desenvolvedora Front End - Next', local: 'Remoto' },
-    { periodo: '2022 - 2023', title: 'Connect and Build Foundations (Fullstack)', local: 'Rocketseat' },
+    { periodo: '2021 - 2022', title: 'Desenvolvedora Front End - Next', local: 'Presencial' },
     { periodo: '2023', title: 'Desenvolvedora Full Stack - Freelancer', local: 'Remoto' },
-    { periodo: '2023 - 2024', title: 'Desenvolvedora Full Stack - Grupo Genneration', local: 'Remoto' },
-    { periodo: '2024', title: 'Inglês (B2)', local: 'Oxford, Malta' }
+    { periodo: '2023 - 2024', title: 'Desenvolvedora Full Stack - Grupo Genneration', local: 'Presencial' },
+    { periodo: '2024', title: 'Intercâmbio Acadêmico – Curso intensivo de inglês (nível B2)', local: 'Malta' }
 ]
 
 const grid = ref(null)
