@@ -11,7 +11,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Brand icons
-import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 // Solid icons (incluindo header)
 import {
   faArrowDown,
@@ -28,7 +28,6 @@ import {
 library.add(
   faLinkedin,
   faGithub,
-  faInstagram,
   faArrowDown,
   faSun,
   faMoon,

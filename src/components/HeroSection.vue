@@ -23,10 +23,6 @@
             <font-awesome-icon :icon="['fab', 'github']"
               class="w-6 h-6 hover:text-gray-700 transition-transform transform hover:scale-110" />
           </a>
-          <a href="#" target="_blank">
-            <font-awesome-icon :icon="['fab', 'instagram']"
-              class="w-6 h-6 hover:text-pink-500 transition-transform transform hover:scale-110" />
-          </a>
         </div>
       </div>
 
