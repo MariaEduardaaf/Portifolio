@@ -161,7 +161,7 @@ const getOriginTagClass = (project) => {
     const origin = getOriginTag(project)
     switch (origin) {
         case 'Publicado na App Store':
-            return 'bg-gradient-to-r from-orange-100 to-red-100 text-orange-800 dark:bg-gradient-to-r dark:from-orange-900 dark:to-red-900 dark:text-orange-300 ring-1 ring-orange-300 dark:ring-orange-600'
+            return 'bg-gradient-to-r from-purple-100 to-purple-200 text-purple-800 dark:bg-gradient-to-r dark:from-purple-800 dark:to-purple-900 dark:text-purple-300 ring-1 ring-purple-300 dark:ring-purple-600'
         case 'Empresa':
             return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
         case 'Projeto Pessoal':
