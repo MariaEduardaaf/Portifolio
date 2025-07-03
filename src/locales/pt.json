@@ -23,25 +23,7 @@
         "timelineTitle": "Minha Jornada"
     },
     "projects": {
-        "title": "Meus Projetos",
-        "enemninja": {
-            "description": "Aplicativo móvel para preparação do ENEM com Flutter e Firebase"
-        },
-        "zapfacil": {
-            "description": "Aplicação SaaS para gestão de comunicação em PMEs com Vue.js e PostgreSQL"
-        },
-        "gerenciamei": {
-            "description": "Blog personalizado em WordPress com design responsivo e SEO otimizado"
-        },
-        "snaprix": {
-            "description": "Jogo de Tetris moderno e divertido desenvolvido em Flutter/Flame"
-        },
-        "playlistporter": {
-            "description": "Website moderno e responsivo para divulgar o app PlaylistPorter"
-        },
-        "foodspot": {
-            "description": "Aplicativo móvel para descobrir e avaliar restaurantes"
-        }
+        "title": "Meus Projetos"
     },
     "contact": {
         "title": "Me contacte",

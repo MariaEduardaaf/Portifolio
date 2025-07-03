@@ -23,25 +23,7 @@
         "timelineTitle": "Mi Trayectoria"
     },
     "projects": {
-        "title": "Mis Proyectos",
-        "enemninja": {
-            "description": "Aplicación móvil para preparación del ENEM con Flutter y Firebase"
-        },
-        "zapfacil": {
-            "description": "Aplicación SaaS para gestión de comunicación en PyMEs con Vue.js y PostgreSQL"
-        },
-        "gerenciamei": {
-            "description": "Blog personalizado en WordPress con diseño responsivo y SEO optimizado"
-        },
-        "snaprix": {
-            "description": "Juego de Tetris moderno y divertido desarrollado en Flutter/Flame"
-        },
-        "playlistporter": {
-            "description": "Sitio web moderno y responsivo para promocionar la app PlaylistPorter"
-        },
-        "foodspot": {
-            "description": "Aplicación móvil para descubrir y calificar restaurantes"
-        }
+        "title": "Mis Proyectos"
     },
     "contact": {
         "title": "Contáctame",

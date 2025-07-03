@@ -23,25 +23,7 @@
         "timelineTitle": "Мой путь"
     },
     "projects": {
-        "title": "Мои проекты",
-        "enemninja": {
-            "description": "Мобильное приложение для подготовки к ENEM с Flutter и Firebase"
-        },
-        "zapfacil": {
-            "description": "SaaS-приложение для управления коммуникациями в малых и средних предприятиях с Vue.js и PostgreSQL"
-        },
-        "gerenciamei": {
-            "description": "Персонализированный WordPress блог с адаптивным дизайном и SEO-оптимизацией"
-        },
-        "snaprix": {
-            "description": "Современная и увлекательная игра Тетрис, разработанная на Flutter/Flame"
-        },
-        "playlistporter": {
-            "description": "Современный и отзывчивый веб-сайт для продвижения приложения PlaylistPorter"
-        },
-        "foodspot": {
-            "description": "Мобильное приложение для поиска и оценки ресторанов"
-        }
+        "title": "Мои проекты"
     },
     "contact": {
         "title": "Свяжитесь со мной",

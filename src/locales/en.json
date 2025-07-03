@@ -23,33 +23,7 @@
         "timelineTitle": "My Journey"
     },
     "projects": {
-        "title": "My Projects",
-        "loading": "Loading project...",
-        "technologies": "Technologies Used",
-        "features": "Key Features",
-        "challenges": "Technical Challenges",
-        "learnings": "Key Learnings",
-        "viewCode": "View Code",
-        "viewLive": "View Live",
-        "companyProject": "Company Project",
-        "enemninja": {
-            "description": "Mobile app for ENEM preparation with Flutter and Firebase"
-        },
-        "zapfacil": {
-            "description": "SaaS application for communication management in SMEs with Vue.js and PostgreSQL"
-        },
-        "gerenciamei": {
-            "description": "Custom WordPress blog with responsive design and SEO optimization"
-        },
-        "snaprix": {
-            "description": "Modern and fun Tetris game developed in Flutter/Flame"
-        },
-        "playlistporter": {
-            "description": "Modern and responsive website to promote PlaylistPorter app"
-        },
-        "foodspot": {
-            "description": "Mobile app to discover and rate restaurants"
-        }
+        "title": "My Projects"
     },
     "navigation": {
         "back": "Back to Projects"
