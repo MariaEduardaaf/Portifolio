@@ -67,8 +67,13 @@
                                 {{ t(`projects.items.${project.titleKey}.title`) }}
                             </h3>
 
+                            <!-- Subtítulo -->
+                            <p class="text-sm font-medium text-purple-600 dark:text-purple-400 mb-2">
+                                {{ t(`projects.items.${project.titleKey}.subtitle`) }}
+                            </p>
+
                             <!-- Descrição curta -->
-                            <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed">
+                            <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-3 leading-relaxed">
                                 {{ t(`projects.items.${project.titleKey}.description`) }}
                             </p>
 
@@ -313,6 +318,13 @@ const projects = ref([
 .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

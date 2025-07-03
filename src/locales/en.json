@@ -40,39 +40,48 @@
         "items": {
             "cartoesFacil": {
                 "title": "Easy Cards",
-                "description": "Assistant for comparing and choosing credit cards"
+                "subtitle": "Credit card comparison app",
+                "description": "Participated as a collaborator in the development of Easy Cards, contributing with improvements and implementations on the frontend. I helped create reusable visual components, responsiveness, and navigation experience refinement, applying UI/UX best practices."
             },
             "jogoBiblia": {
                 "title": "Bible Quiz: Daily Study",
-                "description": "Biblical quiz with ranking and gamification"
+                "subtitle": "Biblical quiz app with gamification",
+                "description": "Performed app updates focusing on performance, stability, and advertising integration. I optimized the monetization system (AdMob) and contributed with layout adjustments and user experience improvements."
             },
             "caloTrack": {
                 "title": "CaloTrack: Calorie Monitor",
-                "description": "Nutrition app with AI analysis and meal planning"
+                "subtitle": "Nutrition app with AI for food analysis and personalized planning",
+                "description": "I developed the entire app frontend and implemented AI integration for image analysis and personalized plan generation. I created features like nutritional goals, charts, food diary, water intake, and intelligent recommendation system."
             },
             "enemNinja": {
                 "title": "Enem Ninja",
-                "description": "Educational app with simulators and gamification for ENEM"
+                "subtitle": "Educational app with simulators and gamification for ENEM",
+                "description": "Developed entirely by me, from design to programming. I created interactive simulators, scoring system, progress tracking, and a content library focused on performance and engagement for ENEM students."
             },
             "zapFacil": {
                 "title": "EasyZap",
-                "description": "Contact management and WhatsApp message automation app for businesses"
+                "subtitle": "Dashboard for WhatsApp Business message automation",
+                "description": "I was responsible for developing the administrative dashboard using Vue.js. The interface allows configuration and monitoring of automated message campaigns, focusing on clarity, organization, and responsiveness."
             },
             "gerenciaMei": {
                 "title": "ManageMEI",
-                "description": "Platform for issuing invoices and MEI control"
+                "subtitle": "Simplified management platform for individual microentrepreneurs",
+                "description": "I contributed to creating the main screens and app flows, working in a team focusing on financial organization, document issuance, and data visualization. I worked on alignment between frontend, backend, and design."
             },
             "snaprix": {
                 "title": "Snaprix",
-                "description": "Addictive Tetris-style mobile game"
+                "subtitle": "Addictive Tetris-style mobile game",
+                "description": "Addictive Tetris-style mobile game developed with Flutter"
             },
             "playlistPorter": {
                 "title": "PlaylistPorter Website",
-                "description": "Responsive landing page for playlist transfers"
+                "subtitle": "Responsive landing page for playlist transfers",
+                "description": "Responsive landing page for playlist transfers between platforms"
             },
             "petCare": {
                 "title": "PetCare Platform",
-                "description": "Web platform for pet adoption and care"
+                "subtitle": "Web platform for pet adoption and care",
+                "description": "Web platform for pet adoption and care developed with HTML, CSS, and JavaScript"
             }
         }
     },

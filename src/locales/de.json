@@ -40,39 +40,48 @@
         "items": {
             "cartoesFacil": {
                 "title": "Einfache Karten",
-                "description": "Assistent zum Vergleichen und Auswählen von Kreditkarten"
+                "subtitle": "App zum Vergleich von Kreditkarten",
+                "description": "Ich habe als Mitarbeiterin an der Entwicklung von Einfache Karten teilgenommen und Verbesserungen und Implementierungen im Frontend beigetragen. Ich half bei der Erstellung wiederverwendbarer visueller Komponenten, Responsivität und Verfeinerung der Navigationserfahrung, wobei ich UI/UX-Best-Practices anwendete."
             },
             "jogoBiblia": {
                 "title": "Bibelspiel: Tägliches Studium",
-                "description": "Bibel-Quiz mit Ranking und Gamification"
+                "subtitle": "Bibel-Quiz-App mit Gamification",
+                "description": "Ich führte App-Updates durch, die sich auf Leistung, Stabilität und Werbeintegration konzentrierten. Ich optimierte das Monetarisierungssystem (AdMob) und trug zu Layout-Anpassungen und Benutzererfahrungsverbesserungen bei."
             },
             "caloTrack": {
                 "title": "CaloTrack: Kalorien-Monitor",
-                "description": "Ernährungs-App mit KI-Analyse und Ernährungsplan"
+                "subtitle": "Ernährungs-App mit KI für Lebensmittelanalyse und personalisierten Plan",
+                "description": "Ich entwickelte das gesamte App-Frontend und implementierte die KI-Integration für Bildanalyse und Generierung personalisierter Pläne. Ich erstellte Funktionen wie Ernährungsziele, Diagramme, Ernährungstagebuch, Wasseraufnahme und intelligentes Empfehlungssystem."
             },
             "enemNinja": {
                 "title": "Enem Ninja",
-                "description": "Bildungs-App mit Simulationen und Gamification für ENEM"
+                "subtitle": "Bildungs-App mit Simulationen und Gamification für ENEM",
+                "description": "Vollständig von mir entwickelt, vom Design bis zur Programmierung. Ich erstellte interaktive Simulationen, Bewertungssystem, Fortschrittsverfolgung und eine Inhaltsbibliothek mit Fokus auf Leistung und Engagement für ENEM-Studenten."
             },
             "zapFacil": {
                 "title": "ZapFácil",
-                "description": "Kontaktmanagement und WhatsApp-Nachrichten-Automatisierung für Unternehmen"
+                "subtitle": "Dashboard für WhatsApp Business Nachrichtenautomatisierung",
+                "description": "Ich war verantwortlich für die Entwicklung des administrativen Dashboards mit Vue.js. Die Benutzeroberfläche ermöglicht Konfiguration und Überwachung automatischer Nachrichtenkampagnen mit Fokus auf Klarheit, Organisation und Responsivität."
             },
             "gerenciaMei": {
                 "title": "VerwaltenMEI",
-                "description": "Plattform für Rechnungsstellung und MEI-Kontrolle"
+                "subtitle": "Vereinfachte Verwaltungsplattform für Einzelunternehmer",
+                "description": "Ich trug zur Erstellung der Hauptbildschirme und App-Flows bei, arbeitete im Team mit Fokus auf Finanzorganisation, Dokumentenerstellung und Datenvisualisierung. Ich arbeitete an der Abstimmung zwischen Frontend, Backend und Design."
             },
             "snaprix": {
                 "title": "Snaprix",
-                "description": "Süchtig machendes Tetris-ähnliches Handyspiel"
+                "subtitle": "Süchtig machendes Tetris-ähnliches Handyspiel",
+                "description": "Süchtig machendes Tetris-ähnliches Handyspiel entwickelt mit Flutter"
             },
             "playlistPorter": {
                 "title": "PlaylistPorter Website",
-                "description": "Responsive Landing Page für Playlist-Übertragungen"
+                "subtitle": "Responsive Landing Page für Playlist-Übertragungen",
+                "description": "Responsive Landing Page für Playlist-Übertragungen zwischen Plattformen"
             },
             "petCare": {
                 "title": "PetCare Platform",
-                "description": "Web-Plattform für Haustiervermittlung und -pflege"
+                "subtitle": "Web-Plattform für Haustiervermittlung und -pflege",
+                "description": "Web-Plattform für Haustiervermittlung und -pflege entwickelt mit HTML, CSS und JavaScript"
             }
         }
     },

@@ -40,39 +40,48 @@
         "items": {
             "cartoesFacil": {
                 "title": "Tarjetas Fácil",
-                "description": "Asistente para comparar y elegir tarjetas de crédito"
+                "subtitle": "App para comparación de tarjetas de crédito",
+                "description": "Participé como colaboradora en el desarrollo de Tarjetas Fácil, contribuyendo con mejoras e implementaciones en el frontend. Ayudé a crear componentes visuales reutilizables, responsividad y refinamiento de la experiencia de navegación, aplicando buenas prácticas de UI/UX."
             },
             "jogoBiblia": {
                 "title": "Juego de la Biblia: Estudio Diario",
-                "description": "Quiz bíblico con ranking y gamificación"
+                "subtitle": "App de quiz bíblico con gamificación",
+                "description": "Realicé actualizaciones en la aplicación enfocándome en rendimiento, estabilidad e integración de anuncios. Optimicé el sistema de monetización (AdMob) y contribuí con ajustes de diseño y experiencia de usuario."
             },
             "caloTrack": {
                 "title": "CaloTrack: Monitor de Calorías",
-                "description": "App de nutrición con análisis por IA y plan alimentario"
+                "subtitle": "App de nutrición con IA para análisis alimentario y plan personalizado",
+                "description": "Desarrollé todo el frontend de la aplicación e implementé la integración con IA para análisis de imágenes y generación de planes personalizados. Creé funcionalidades como metas nutricionales, gráficos, diario alimentario, ingesta de agua y sistema inteligente de recomendaciones."
             },
             "enemNinja": {
                 "title": "Enem Ninja",
-                "description": "App educativa con simulacros y gamificación para ENEM"
+                "subtitle": "App educativa con simulacros y gamificación para ENEM",
+                "description": "Desarrollado íntegramente por mí, desde el diseño hasta la programación. Creé simulacros interactivos, sistema de puntuación, seguimiento de progreso y una biblioteca de contenidos enfocada en rendimiento y engagement para estudiantes de ENEM."
             },
             "zapFacil": {
                 "title": "ZapFácil",
-                "description": "Aplicación de gestión de contactos y automatización de mensajes vía WhatsApp para empresas"
+                "subtitle": "Dashboard para automatización de mensajes vía WhatsApp Business",
+                "description": "Fui responsable del desarrollo del dashboard administrativo utilizando Vue.js. La interfaz permite configuración y monitoreo de campañas de mensajes automáticos, con enfoque en claridad, organización y responsividad."
             },
             "gerenciaMei": {
                 "title": "GestionaMEI",
-                "description": "Plataforma para emisión de facturas y control de MEI"
+                "subtitle": "Plataforma de gestión simplificada para microemprendedores individuales",
+                "description": "Contribuí en la creación de las principales pantallas y flujos de la app, trabajando en equipo con enfoque en organización financiera, emisión de documentos y visualización de datos. Actué en la alineación entre frontend, backend y diseño."
             },
             "snaprix": {
                 "title": "Snaprix",
-                "description": "Juego móvil adictivo estilo Tetris"
+                "subtitle": "Juego móvil adictivo estilo Tetris",
+                "description": "Juego móvil adictivo estilo Tetris desarrollado con Flutter"
             },
             "playlistPorter": {
                 "title": "PlaylistPorter Website",
-                "description": "Landing page responsiva para transferencia de playlists"
+                "subtitle": "Landing page responsiva para transferencia de playlists",
+                "description": "Landing page responsiva para transferencia de playlists entre plataformas"
             },
             "petCare": {
                 "title": "PetCare Platform",
-                "description": "Plataforma web para adopción y cuidado de mascotas"
+                "subtitle": "Plataforma web para adopción y cuidado de mascotas",
+                "description": "Plataforma web para adopción y cuidado de mascotas desarrollada con HTML, CSS y JavaScript"
             }
         }
     },
