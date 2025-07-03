@@ -121,7 +121,8 @@ const timeline = [
     { periodo: '2023', title: 'Desenvolvedora WordPress', local: 'Remoto' },
     { periodo: '2023', title: 'Desenvolvedora Full Stack - Freelancer', local: 'Remoto' },
     { periodo: '2023 - 2024', title: 'Desenvolvedora Full Stack - Grupo Genneration', local: '' },
-    { periodo: '2024', title: 'Intercâmbio Acadêmico – Curso intensivo de inglês (nível B2)', local: 'Malta' }
+    { periodo: '2024', title: 'Intercâmbio Acadêmico – Curso intensivo de inglês (nível B2)', local: 'Malta' },
+    { periodo: '2025', title: 'Estudo de Business e Mercado Internacional', local: 'Espanha' }
 ]
 
 const grid = ref(null)
