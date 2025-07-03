@@ -23,7 +23,35 @@
         "timelineTitle": "Mi Trayectoria"
     },
     "projects": {
-        "title": "Mis Proyectos"
+        "title": "Mis Proyectos",
+        "tags": {
+            "appStore": "Publicado en la App Store",
+            "company": "Empresa",
+            "personal": "Proyecto Personal",
+            "freelancer": "Freelancer"
+        },
+        "buttons": {
+            "viewProject": "Ver Proyecto",
+            "viewAppStore": "Ver en App Store"
+        },
+        "status": {
+            "inDevelopment": "En desarrollo"
+        }
+    },
+    "timeline": {
+        "items": {
+            "frontendNext": "Desarrolladora Front End - Next",
+            "wordPressDev": "Desarrolladora WordPress",
+            "fullStackFreelancer": "Desarrolladora Full Stack - Freelancer",
+            "fullStackGeneration": "Desarrolladora Full Stack - Grupo Genneration",
+            "englishMalta": "Intercambio Académico – Curso intensivo de inglés (nivel B2)",
+            "businessSpain": "Estudio de Business y Mercado Internacional"
+        },
+        "locations": {
+            "remote": "Remoto",
+            "malta": "Malta",
+            "spain": "España"
+        }
     },
     "contact": {
         "title": "Contáctame",

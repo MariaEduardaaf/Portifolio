@@ -23,7 +23,35 @@
         "timelineTitle": "My Journey"
     },
     "projects": {
-        "title": "My Projects"
+        "title": "My Projects",
+        "tags": {
+            "appStore": "Published on the App Store",
+            "company": "Company",
+            "personal": "Personal Project",
+            "freelancer": "Freelancer"
+        },
+        "buttons": {
+            "viewProject": "View Project",
+            "viewAppStore": "View on App Store"
+        },
+        "status": {
+            "inDevelopment": "In development"
+        }
+    },
+    "timeline": {
+        "items": {
+            "frontendNext": "Front End Developer - Next",
+            "wordPressDev": "WordPress Developer",
+            "fullStackFreelancer": "Full Stack Developer - Freelancer",
+            "fullStackGeneration": "Full Stack Developer - Grupo Genneration",
+            "englishMalta": "Academic Exchange – Intensive English Course (B2 level)",
+            "businessSpain": "Business and International Market Studies"
+        },
+        "locations": {
+            "remote": "Remote",
+            "malta": "Malta",
+            "spain": "Spain"
+        }
     },
     "navigation": {
         "back": "Back to Projects"

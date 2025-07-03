@@ -110,11 +110,11 @@
                                :aria-label="project.isAppStore 
                                    ? `Ver ${project.title} na App Store` 
                                    : `Ver projeto ${project.title} ao vivo`">
-                                <span>{{ project.isAppStore ? 'Ver na App Store' : 'Ver Projeto' }}</span>
+                                <span>{{ project.isAppStore ? t('projects.buttons.viewAppStore') : t('projects.buttons.viewProject') }}</span>
                                 <font-awesome-icon :icon="project.isAppStore ? ['fab', 'apple'] : ['fas', 'external-link-alt']" class="text-xs" />
                             </a>
                             <span v-else class="text-xs text-gray-400 dark:text-gray-500 italic">
-                                Em desenvolvimento
+                                {{ t('projects.status.inDevelopment') }}
                             </span>
                         </div>
                     </div>
@@ -162,26 +162,23 @@ const handleImageError = (event, project) => {
 }
 
 const getOriginTag = (project) => {
-    if (project.isAppStore) return 'Publicado na App Store'
-    if (project.githubUrl === '#') return 'Empresa'
-    if (project.id === 4 || project.id === 5 || project.id === 6) return 'Projeto Pessoal'
-    return 'Freelancer'
+    if (project.isAppStore) return t('projects.tags.appStore')
+    if (project.githubUrl === '#') return t('projects.tags.company')
+    if (project.id === 4 || project.id === 5 || project.id === 6) return t('projects.tags.personal')
+    return t('projects.tags.freelancer')
 }
 
 const getOriginTagClass = (project) => {
-    const origin = getOriginTag(project)
-    switch (origin) {
-        case 'Publicado na App Store':
-            return 'bg-gradient-to-r from-purple-100 to-purple-200 text-purple-800 dark:bg-gradient-to-r dark:from-purple-800 dark:to-purple-900 dark:text-purple-300 ring-1 ring-purple-300 dark:ring-purple-600'
-        case 'Empresa':
-            return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
-        case 'Projeto Pessoal':
-            return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
-        case 'Freelancer':
-            return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
-        default:
-            return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
+    if (project.isAppStore) {
+        return 'bg-gradient-to-r from-purple-100 to-purple-200 text-purple-800 dark:bg-gradient-to-r dark:from-purple-800 dark:to-purple-900 dark:text-purple-300 ring-1 ring-purple-300 dark:ring-purple-600'
     }
+    if (project.githubUrl === '#') {
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+    }
+    if (project.id === 4 || project.id === 5 || project.id === 6) {
+        return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+    }
+    return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300'
 }
 
 const getTechIcon = (tech) => {

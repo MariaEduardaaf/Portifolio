@@ -117,12 +117,12 @@ const skills = [
 ]
 
 const timeline = [
-    { periodo: '2021 - 2022', title: 'Desenvolvedora Front End - Next', local: '' },
-    { periodo: '2023', title: 'Desenvolvedora WordPress', local: 'Remoto' },
-    { periodo: '2023', title: 'Desenvolvedora Full Stack - Freelancer', local: 'Remoto' },
-    { periodo: '2023 - 2024', title: 'Desenvolvedora Full Stack - Grupo Genneration', local: '' },
-    { periodo: '2024', title: 'Intercâmbio Acadêmico – Curso intensivo de inglês (nível B2)', local: 'Malta' },
-    { periodo: '2025', title: 'Estudo de Business e Mercado Internacional', local: 'Espanha' }
+    { periodo: '2021 - 2022', title: t('timeline.items.frontendNext'), local: '' },
+    { periodo: '2023', title: t('timeline.items.wordPressDev'), local: t('timeline.locations.remote') },
+    { periodo: '2023', title: t('timeline.items.fullStackFreelancer'), local: t('timeline.locations.remote') },
+    { periodo: '2023 - 2024', title: t('timeline.items.fullStackGeneration'), local: '' },
+    { periodo: '2024', title: t('timeline.items.englishMalta'), local: t('timeline.locations.malta') },
+    { periodo: '2025', title: t('timeline.items.businessSpain'), local: t('timeline.locations.spain') }
 ]
 
 const grid = ref(null)

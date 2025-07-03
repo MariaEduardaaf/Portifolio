@@ -23,7 +23,35 @@
         "timelineTitle": "Мой путь"
     },
     "projects": {
-        "title": "Мои проекты"
+        "title": "Мои проекты",
+        "tags": {
+            "appStore": "Опубликовано в App Store",
+            "company": "Компания",
+            "personal": "Личный проект",
+            "freelancer": "Фрилансер"
+        },
+        "buttons": {
+            "viewProject": "Посмотреть проект",
+            "viewAppStore": "Посмотреть в App Store"
+        },
+        "status": {
+            "inDevelopment": "В разработке"
+        }
+    },
+    "timeline": {
+        "items": {
+            "frontendNext": "Frontend разработчик - Next",
+            "wordPressDev": "WordPress разработчик",
+            "fullStackFreelancer": "Full Stack разработчик - Фрилансер",
+            "fullStackGeneration": "Full Stack разработчик - Grupo Genneration",
+            "englishMalta": "Академический обмен – Интенсивный курс английского языка (уровень B2)",
+            "businessSpain": "Изучение бизнеса и международного рынка"
+        },
+        "locations": {
+            "remote": "Удаленно",
+            "malta": "Мальта",
+            "spain": "Испания"
+        }
     },
     "contact": {
         "title": "Свяжитесь со мной",
