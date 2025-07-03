@@ -80,10 +80,14 @@
                             <a v-if="project.liveUrl" 
                                :href="project.liveUrl" 
                                target="_blank"
-                               class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-medium rounded-lg transition-all duration-200 hover:scale-105"
-                               :aria-label="`Ver projeto ${project.title} ao vivo`">
-                                <span>Ver Projeto</span>
-                                <font-awesome-icon :icon="['fas', 'external-link-alt']" class="text-xs" />
+                               :class="project.isAppStore 
+                                   ? 'inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-xs font-medium rounded-lg transition-all duration-200 hover:scale-105 shadow-md'
+                                   : 'inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-medium rounded-lg transition-all duration-200 hover:scale-105'"
+                               :aria-label="project.isAppStore 
+                                   ? `Ver ${project.title} na App Store` 
+                                   : `Ver projeto ${project.title} ao vivo`">
+                                <span>{{ project.isAppStore ? 'Ver na App Store' : 'Ver Projeto' }}</span>
+                                <font-awesome-icon :icon="project.isAppStore ? ['fab', 'apple'] : ['fas', 'external-link-alt']" class="text-xs" />
                             </a>
                             <span v-else class="text-xs text-gray-400 dark:text-gray-500 italic">
                                 Em desenvolvimento
@@ -131,6 +135,7 @@ const handleImageError = (event, project) => {
 }
 
 const getOriginTag = (project) => {
+    if (project.isAppStore) return 'Publicado na App Store'
     if (project.githubUrl === '#') return 'Empresa'
     if (project.id === 4 || project.id === 5 || project.id === 6) return 'Projeto Pessoal'
     return 'Freelancer'
@@ -139,6 +144,8 @@ const getOriginTag = (project) => {
 const getOriginTagClass = (project) => {
     const origin = getOriginTag(project)
     switch (origin) {
+        case 'Publicado na App Store':
+            return 'bg-gradient-to-r from-orange-100 to-red-100 text-orange-800 dark:bg-gradient-to-r dark:from-orange-900 dark:to-red-900 dark:text-orange-300 ring-1 ring-orange-300 dark:ring-orange-600'
         case 'Empresa':
             return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
         case 'Projeto Pessoal':
@@ -166,12 +173,45 @@ const getTechIcon = (tech) => {
         'Web': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg',
         'Game': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg',
         'Mobile': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
-        'SEO': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg'
+        'SEO': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
+        'AI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg'
     }
     return icons[tech] || null
 }
 
 const projects = ref([
+    // Projetos da App Store em destaque
+    { 
+        id: 7, 
+        title: 'Cartões Fácil', 
+        shortDescription: 'Assistente para comparar e escolher cartões de crédito com recomendações personalizadas', 
+        tags: ['Flutter', 'Firebase'], 
+        githubUrl: null, 
+        liveUrl: 'https://apps.apple.com/br/app/cart%C3%A3o-f%C3%A1cil/id1251949878',
+        image: null,
+        isAppStore: true
+    },
+    { 
+        id: 8, 
+        title: 'Jogo da Bíblia: Estudo Diário', 
+        shortDescription: 'App de quiz bíblico com sistema de pontuação e ranking diário', 
+        tags: ['Flutter', 'Firebase'], 
+        githubUrl: null, 
+        liveUrl: 'https://apps.apple.com/es/app/jogo-da-b%C3%ADblia-estudo-di%C3%A1rio/id6463932846',
+        image: null,
+        isAppStore: true
+    },
+    { 
+        id: 9, 
+        title: 'CaloTrack: Monitor de Calorias', 
+        shortDescription: 'App de nutrição com análise por IA e planejamento alimentar', 
+        tags: ['Flutter', 'Firebase', 'AI'], 
+        githubUrl: null, 
+        liveUrl: 'https://apps.apple.com/es/app/calotrack-monitor-de-calorias/id6463879811',
+        image: null,
+        isAppStore: true
+    },
+    // Outros projetos
     { 
         id: 1, 
         title: 'Enem Ninja', 
