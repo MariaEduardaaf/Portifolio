@@ -8,7 +8,7 @@
             </h1> 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
                 <div v-for="project in projects" :key="project.id"
-                    class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-sm group relative transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/30 hover:ring-2 hover:ring-purple-500 hover:ring-offset-2 hover:ring-offset-white dark:hover:ring-offset-gray-800 overflow-hidden">
+                    class="project-card bg-purple-100 dark:bg-purple-900 rounded-2xl shadow-sm group relative transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/30 hover:ring-2 hover:ring-purple-500 hover:ring-offset-2 hover:ring-offset-purple-100 dark:hover:ring-offset-purple-900 overflow-hidden">
 
                     <!-- Tag de origem no topo -->
                     <div class="absolute top-3 left-3 z-10">
@@ -19,7 +19,7 @@
                     </div>
 
                     <!-- Imagem do projeto -->
-                    <div class="relative h-48 bg-gray-50 dark:bg-gray-700 overflow-hidden">
+                    <div class="relative h-48 bg-purple-50 dark:bg-purple-800 overflow-hidden">
                         <div v-if="project.image && project.isLogo" 
                              class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purple-700 dark:to-purple-800">
                             <img :src="getImageUrl(project.image)" 
