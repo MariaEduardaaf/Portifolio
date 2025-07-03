@@ -117,9 +117,9 @@ const skills = [
 ]
 
 const timeline = [
-    { periodo: '2021 - 2022', title: 'Desenvolvedora Front End - Next', local: 'Presencial' },
+    { periodo: '2021 - 2022', title: 'Desenvolvedora Front End - Next', local: '' },
     { periodo: '2023', title: 'Desenvolvedora Full Stack - Freelancer', local: 'Remoto' },
-    { periodo: '2023 - 2024', title: 'Desenvolvedora Full Stack - Grupo Genneration', local: 'Presencial' },
+    { periodo: '2023 - 2024', title: 'Desenvolvedora Full Stack - Grupo Genneration', local: '' },
     { periodo: '2024', title: 'Intercâmbio Acadêmico – Curso intensivo de inglês (nível B2)', local: 'Malta' }
 ]
 
