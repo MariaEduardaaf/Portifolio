@@ -119,6 +119,9 @@
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import snaprixImg from '../assets/img/snaprix.png'
+import playlistPorterImg from '../assets/img/PlaylistPorterIcon.png'
+import doguinhoImg from '../assets/img/doguinhoLogo.png'
 
 const { t } = useI18n()
 
@@ -272,7 +275,7 @@ const projects = ref([
         tags: ['Flutter', 'Dart', 'Game'], 
         githubUrl: 'https://github.com/MariaEduardaaf/Snaprix', 
         liveUrl: null,
-        image: '/src/snaprix.png',
+        image: snaprixImg,
         altText: 'Logo do aplicativo Snaprix',
         isLogo: true
     },
@@ -283,7 +286,9 @@ const projects = ref([
         tags: ['HTML', 'JavaScript', 'CSS'], 
         githubUrl: 'https://github.com/MariaEduardaaf/playlistporter-website', 
         liveUrl: 'https://playlistporter-website.vercel.app',
-        iconEmoji: '🎵'
+        image: playlistPorterImg,
+        altText: 'Logo do PlaylistPorter',
+        isLogo: true
     },
     { 
         id: 6, 
@@ -292,7 +297,9 @@ const projects = ref([
         tags: ['HTML', 'CSS', 'JavaScript'], 
         githubUrl: 'https://github.com/MariaEduardaaf/projeto-doguinho', 
         liveUrl: 'https://projeto-doguinho.vercel.app',
-        iconEmoji: '🐶'
+        image: doguinhoImg,
+        altText: 'Logo do PetCare Platform',
+        isLogo: true
     }
 ])
 </script>
