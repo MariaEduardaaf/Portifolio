@@ -313,30 +313,9 @@ const projects = ref([
     transition: all 0.3s ease;
 }
 
-.project-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 1rem;
-    padding: 2px;
-    background: linear-gradient(90deg, #6b21a8, #9333ea, #8b5cf6, #9333ea, #6b21a8);
-    background-size: 300% 100%;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    mask-composite: exclude;
-    -webkit-mask-composite: destination-out;
-}
-
-.project-card:hover::before {
-    opacity: 1;
-    animation: border-glow 2s linear infinite;
-}
-
-@keyframes border-glow {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 200% 0%; }
+.project-card:hover {
+    border-color: #9333ea;
+    box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3);
 }
 
 .line-clamp-2 {
