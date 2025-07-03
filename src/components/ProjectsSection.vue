@@ -97,7 +97,7 @@
                                :href="project.liveUrl" 
                                target="_blank"
                                :class="project.isAppStore 
-                                   ? 'inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-xs font-medium rounded-lg transition-all duration-200 hover:scale-105 shadow-md'
+                                   ? 'inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white text-xs font-medium rounded-lg transition-all duration-200 hover:scale-105 shadow-md'
                                    : 'inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-medium rounded-lg transition-all duration-200 hover:scale-105'"
                                :aria-label="project.isAppStore 
                                    ? `Ver ${project.title} na App Store` 
