@@ -8,7 +8,7 @@
             </h1> 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
                 <div v-for="project in projects" :key="project.id"
-                    class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-sm group relative transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl overflow-hidden">
+                    class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-sm group relative transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/30 hover:ring-2 hover:ring-purple-500 hover:ring-offset-2 hover:ring-offset-white dark:hover:ring-offset-gray-800 overflow-hidden">
 
                     <!-- Tag de origem no topo -->
                     <div class="absolute top-3 left-3 z-10">
@@ -313,10 +313,6 @@ const projects = ref([
     transition: all 0.3s ease;
 }
 
-.project-card:hover {
-    border-color: #9333ea;
-    box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3);
-}
 
 .line-clamp-2 {
     display: -webkit-box;
