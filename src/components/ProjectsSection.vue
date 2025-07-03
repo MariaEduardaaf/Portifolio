@@ -22,10 +22,12 @@
                     <div class="relative h-48 bg-gray-50 dark:bg-gray-700 overflow-hidden">
                         <img v-if="project.image" 
                              :src="getImageUrl(project.image)" 
-                             :alt="project.title"
+                             :alt="project.altText || project.title"
                              :class="project.isAppIcon 
                                  ? 'w-24 h-24 object-cover rounded-2xl mx-auto mt-8 shadow-lg transition-transform duration-300 group-hover:scale-110' 
-                                 : 'w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'"
+                                 : project.isLogo 
+                                     ? 'w-40 h-auto mx-auto mt-8 transition-transform duration-300 group-hover:scale-105'
+                                     : 'w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'"
                              @error="handleImageError($event, project)">
                         
                         <img v-else-if="project.liveUrl && !project.iconEmoji" 
@@ -181,7 +183,8 @@ const getTechIcon = (tech) => {
         'Game': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg',
         'Mobile': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
         'SEO': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
-        'AI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg'
+        'AI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg',
+        'REST API': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg'
     }
     return icons[tech] || null
 }
@@ -236,11 +239,14 @@ const projects = ref([
     { 
         id: 2, 
         title: 'ZapFácil', 
-        shortDescription: 'SaaS para automação de WhatsApp Business', 
-        tags: ['Vue', 'TypeScript', 'PostgreSQL'], 
+        shortDescription: 'Aplicativo de gestão de contatos e automação de mensagens via WhatsApp voltado para empresas', 
+        tags: ['Flutter', 'Firebase', 'REST API'], 
         githubUrl: '#', 
         liveUrl: 'https://www.zapfacil.com',
-        iconEmoji: '⚡'
+        image: 'https://zapfacil-s3.s3.us-west-2.amazonaws.com/Assets/dev//WJLMvPJgMwMIgno.png?t=1642507014149?t=1642507015119',
+        altText: 'Logo do aplicativo ZapFácil',
+        isLogo: true,
+        year: 2023
     },
     { 
         id: 3, 
