@@ -20,14 +20,20 @@
 
                     <!-- Imagem do projeto -->
                     <div class="relative h-48 bg-gray-50 dark:bg-gray-700 overflow-hidden">
-                        <img v-if="project.image" 
+                        <div v-if="project.image && project.isLogo" 
+                             class="w-full h-full flex items-center justify-center">
+                            <img :src="getImageUrl(project.image)" 
+                                 :alt="project.altText || project.title"
+                                 class="w-40 h-auto transition-transform duration-300 group-hover:scale-105"
+                                 @error="handleImageError($event, project)">
+                        </div>
+                        
+                        <img v-else-if="project.image" 
                              :src="getImageUrl(project.image)" 
                              :alt="project.altText || project.title"
                              :class="project.isAppIcon 
                                  ? 'w-24 h-24 object-cover rounded-2xl mx-auto mt-8 shadow-lg transition-transform duration-300 group-hover:scale-110' 
-                                 : project.isLogo 
-                                     ? 'w-40 h-auto mx-auto mt-8 transition-transform duration-300 group-hover:scale-105'
-                                     : 'w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'"
+                                 : 'w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'"
                              @error="handleImageError($event, project)">
                         
                         <img v-else-if="project.liveUrl && !project.iconEmoji" 
