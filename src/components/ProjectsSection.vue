@@ -8,7 +8,7 @@
             </h1> 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
                 <div v-for="project in projects" :key="project.id"
-                    class="project-card rounded-xl border border-purple-300 bg-purple-100 dark:bg-purple-900 shadow-sm group relative transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/30 hover:ring-2 hover:ring-purple-500 hover:ring-offset-2 hover:ring-offset-white dark:hover:ring-offset-gray-900 overflow-hidden">
+                    class="project-card rounded-xl border border-purple-300 bg-purple-100 dark:bg-purple-900 shadow-sm group relative transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl hover:ring-2 hover:ring-purple-500 hover:ring-offset-2 hover:ring-offset-white dark:hover:ring-offset-gray-900 overflow-hidden min-h-[480px] flex flex-col">
 
                     <!-- Tag de origem no topo -->
                     <div class="absolute top-3 left-3 z-10">
@@ -59,33 +59,36 @@
                     </div>
 
                     <!-- Conteúdo do card -->
-                    <div class="p-4 space-y-3 bg-white dark:bg-gray-800 rounded-b-xl">
-                        <!-- Título -->
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
-                            {{ project.title }}
-                        </h3>
+                    <div class="p-4 bg-white dark:bg-gray-800 rounded-b-xl flex-grow flex flex-col justify-between">
+                        <!-- Conteúdo superior -->
+                        <div class="space-y-3">
+                            <!-- Título -->
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
+                                {{ project.title }}
+                            </h3>
 
-                        <!-- Descrição curta -->
-                        <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed">
-                            {{ project.shortDescription }}
-                        </p>
+                            <!-- Descrição curta -->
+                            <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed">
+                                {{ project.shortDescription }}
+                            </p>
 
-                        <!-- Tecnologias -->
-                        <div class="flex flex-wrap gap-2 py-2">
-                            <div v-for="tag in project.tags" :key="tag" 
-                                class="flex items-center justify-center w-7 h-7 bg-gray-100 dark:bg-gray-700 rounded-lg hover:scale-110 transition-transform duration-200" 
-                                :title="tag">
-                                <img v-if="getTechIcon(tag)"
-                                    :src="getTechIcon(tag)"
-                                    :alt="tag" 
-                                    :aria-label="tag"
-                                    class="w-5 h-5" />
-                                <span v-else class="text-xs font-medium text-gray-700 dark:text-gray-300">{{ tag.slice(0, 2) }}</span>
+                            <!-- Tecnologias -->
+                            <div class="flex flex-wrap gap-2 py-2">
+                                <div v-for="tag in project.tags" :key="tag" 
+                                    class="flex items-center justify-center w-7 h-7 bg-gray-100 dark:bg-gray-700 rounded-lg hover:scale-110 transition-transform duration-200" 
+                                    :title="tag">
+                                    <img v-if="getTechIcon(tag)"
+                                        :src="getTechIcon(tag)"
+                                        :alt="tag" 
+                                        :aria-label="tag"
+                                        class="w-5 h-5" />
+                                    <span v-else class="text-xs font-medium text-gray-700 dark:text-gray-300">{{ tag.slice(0, 2) }}</span>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Footer com link do projeto -->
-                        <div class="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-gray-700">
+                        <div class="flex items-center justify-between pt-3 mt-3 border-t border-gray-100 dark:border-gray-700">
                             <div class="flex items-center space-x-2">
                                 <!-- Link para GitHub se disponível -->
                                 <a v-if="project.githubUrl && project.githubUrl !== '#'" 
