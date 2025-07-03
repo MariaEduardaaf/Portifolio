@@ -21,7 +21,7 @@
                     <!-- Imagem do projeto -->
                     <div class="relative h-48 bg-gray-50 dark:bg-gray-700 overflow-hidden">
                         <div v-if="project.image && project.isLogo" 
-                             class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-800 dark:to-purple-900">
+                             class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purple-700 dark:to-purple-800">
                             <img :src="getImageUrl(project.image)" 
                                  :alt="project.altText || project.title"
                                  :class="project.id === 4 ? 'w-40 h-auto transition-transform duration-300 group-hover:scale-105' : 'w-40 h-auto transition-transform duration-300 group-hover:scale-105'"
@@ -44,11 +44,11 @@
                              @error="handleImageError($event, project)">
                         
                         <div v-else-if="project.iconEmoji" 
-                             class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-800 dark:to-purple-900">
+                             class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purple-700 dark:to-purple-800">
                             <div class="text-5xl mb-2">{{ project.iconEmoji }}</div>
                         </div>
                         
-                        <div v-else class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-800 dark:to-purple-900">
+                        <div v-else class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purple-700 dark:to-purple-800">
                             <font-awesome-icon :icon="['fas', 'code']" class="text-4xl text-purple-600 dark:text-purple-300" />
                         </div>
                     </div>
