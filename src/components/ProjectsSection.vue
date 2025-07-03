@@ -19,7 +19,7 @@
                     </div>
 
                     <!-- Imagem do projeto -->
-                    <div class="relative h-48 bg-purple-50 dark:bg-purple-800 overflow-hidden rounded-t-xl">
+                    <div class="relative h-48 overflow-hidden rounded-t-xl">
                         <div v-if="project.image && project.isLogo" 
                              class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purple-700 dark:to-purple-800">
                             <img :src="getImageUrl(project.image)" 
@@ -28,12 +28,18 @@
                                  @error="handleImageError($event, project)"
                         </div>
                         
+                        <div v-else-if="project.image && project.isAppIcon" 
+                             class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purple-700 dark:to-purple-800">
+                            <img :src="getImageUrl(project.image)" 
+                                 :alt="project.altText || project.title"
+                                 class="w-24 h-24 object-cover rounded-2xl shadow-lg transition-transform duration-300 group-hover:scale-110"
+                                 @error="handleImageError($event, project)">
+                        </div>
+                        
                         <img v-else-if="project.image" 
                              :src="getImageUrl(project.image)" 
                              :alt="project.altText || project.title"
-                             :class="project.isAppIcon 
-                                 ? 'w-24 h-24 object-cover rounded-2xl mx-auto mt-8 shadow-lg transition-transform duration-300 group-hover:scale-110' 
-                                 : 'w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'"
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                              @error="handleImageError($event, project)">
                         
                         <img v-else-if="project.liveUrl && !project.iconEmoji" 
