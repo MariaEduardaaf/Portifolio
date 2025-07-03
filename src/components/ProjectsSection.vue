@@ -24,9 +24,8 @@
                              class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purple-700 dark:to-purple-800">
                             <img :src="getImageUrl(project.image)" 
                                  :alt="project.altText || project.title"
-                                 :class="project.id === 4 ? 'w-40 h-auto transition-transform duration-300 group-hover:scale-105' : 'w-40 h-auto transition-transform duration-300 group-hover:scale-105'"
+                                 :class="project.id === 4 ? 'w-32 h-auto transition-transform duration-300 group-hover:scale-105' : 'w-40 h-auto transition-transform duration-300 group-hover:scale-105'"
                                  @error="handleImageError($event, project)"
-                                 :style="project.id === 4 ? 'width: 160px; height: auto;' : ''">
                         </div>
                         
                         <img v-else-if="project.image" 
