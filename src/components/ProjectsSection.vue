@@ -21,7 +21,7 @@
                     <!-- Imagem do projeto -->
                     <div class="relative h-48 bg-gray-50 dark:bg-gray-700 overflow-hidden">
                         <div v-if="project.image && project.isLogo" 
-                             class="w-full h-full flex items-center justify-center">
+                             class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-800 dark:to-purple-900">
                             <img :src="getImageUrl(project.image)" 
                                  :alt="project.altText || project.title"
                                  class="w-40 h-auto transition-transform duration-300 group-hover:scale-105"
