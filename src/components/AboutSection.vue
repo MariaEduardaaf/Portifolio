@@ -34,7 +34,7 @@
                 </p>
                 <div class="h-px bg-gray-300 dark:bg-gray-600 my-6 w-full max-w-md self-start"></div>
                 <div class="w-full max-w-md flex justify-center">
-                    <button
+                    <button @click="downloadCv"
                         class="bg-black text-white px-5 py-2 rounded-md flex items-center gap-2 text-sm hover:bg-gray-800 hover:scale-105 transition-all">
                         {{ t('about.download') }}
                         <font-awesome-icon :icon="['fas', 'download']" class="text-purple-600" />
@@ -99,11 +99,37 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import perfilImg from '../assets/img/perfil.png'
+import englishCv from '../assets/englishCv.pdf'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+const getCvUrl = computed(() => {
+    switch (locale.value) {
+        case 'en':
+            return englishCv
+        case 'pt':
+        case 'es':
+        case 'de':
+        case 'ru':
+        default:
+            // Por enquanto, usar o CV em inglês para todos os outros idiomas
+            // Você pode adicionar outros CVs aqui no futuro
+            return englishCv
+    }
+})
+
+const downloadCv = () => {
+    const link = document.createElement('a')
+    link.href = getCvUrl.value
+    link.download = `Madu_Freire_CV_${locale.value.toUpperCase()}.pdf`
+    link.target = '_blank'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+}
 
 const skills = [
     { name: 'Vue.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
