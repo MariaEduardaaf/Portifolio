@@ -1,112 +1,125 @@
 {
-    "nav": {
-        "home": "Inicio",
-        "about": "Acerca de",
-        "projects": "Proyectos",
-        "contact": "Contacto"
+  "accessibility": {
+    "skipToContent": "Saltar al contenido principal"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "language": {
+    "select": "Seleccione el idioma"
+  },
+  "hero": {
+    "welcome": "Bienvenido a mi Portafolio",
+    "name": "Madu Freire",
+    "role": "Desarrolladora Full Stack",
+    "scroll": "Desplazar hasta el final"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Hola, soy Duda",
+    "description": "Soy Desarrolladora Full Stack con 3 años de experiencia en frontend y backend usando Flutter, Vue.js y Node.js. Me apasiona crear soluciones impactantes con código limpio y gran experiencia de usuario.\n\nActualmente busco oportunidades remotas para unirme a equipos internacionales, crecer profesionalmente y contribuir a productos digitales significativos.",
+    "download": "Descargar CV",
+    "skillsTitle": "Habilidades",
+    "timelineTitle": "Mi Trayectoria"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "subtitle": "Una seleccion de mis trabajos recientes y proyectos personales",
+    "tags": {
+      "appStore": "Publicado en la App Store",
+      "company": "Empresa",
+      "personal": "Proyecto Personal",
+      "freelancer": "Freelancer"
     },
-    "language": {
-        "select": "Seleccione el idioma"
+    "buttons": {
+      "viewProject": "Ver Proyecto",
+      "viewAppStore": "Ver en App Store"
     },
-    "hero": {
-        "welcome": "Bienvenido a mi Portafolio",
-        "name": "Madu Freire",
-        "role": "Desarrolladora Full Stack",
-        "scroll": "Desplazar hasta el final"
+    "status": {
+      "inDevelopment": "En desarrollo"
     },
-    "about": {
-        "title": "Sobre Mí",
-        "subtitle": "Hola, soy Duda",
-        "description": "Soy Desarrolladora Full Stack con 3 años de experiencia en frontend y backend usando Flutter, Vue.js y Node.js. Me apasiona crear soluciones impactantes con código limpio y gran experiencia de usuario.\n\nActualmente busco oportunidades remotas para unirme a equipos internacionales, crecer profesionalmente y contribuir a productos digitales significativos.",
-        "download": "Descargar CV",
-        "skillsTitle": "Habilidades",
-        "timelineTitle": "Mi Trayectoria"
-    },
-    "projects": {
-        "title": "Mis Proyectos",
-        "tags": {
-            "appStore": "Publicado en la App Store",
-            "company": "Empresa",
-            "personal": "Proyecto Personal",
-            "freelancer": "Freelancer"
-        },
-        "buttons": {
-            "viewProject": "Ver Proyecto",
-            "viewAppStore": "Ver en App Store"
-        },
-        "status": {
-            "inDevelopment": "En desarrollo"
-        },
-        "items": {
-            "cartoesFacil": {
-                "title": "Tarjetas Fácil",
-                "subtitle": "App para comparación de tarjetas de crédito",
-                "description": "Participé como colaboradora en el desarrollo de Tarjetas Fácil, contribuyendo con mejoras e implementaciones en el frontend. Ayudé a crear componentes visuales reutilizables, responsividad y refinamiento de la experiencia de navegación, aplicando buenas prácticas de UI/UX."
-            },
-            "jogoBiblia": {
-                "title": "Juego de la Biblia: Estudio Diario",
-                "subtitle": "App de quiz bíblico con gamificación",
-                "description": "Realicé actualizaciones en la aplicación enfocándome en rendimiento, estabilidad e integración de anuncios. Optimicé el sistema de monetización (AdMob) y contribuí con ajustes de diseño y experiencia de usuario."
-            },
-            "caloTrack": {
-                "title": "CaloTrack: Monitor de Calorías",
-                "subtitle": "App de nutrición con IA para análisis alimentario y plan personalizado",
-                "description": "Desarrollé todo el frontend de la aplicación e implementé la integración con IA para análisis de imágenes y generación de planes personalizados. Creé funcionalidades como metas nutricionales, gráficos, diario alimentario, ingesta de agua y sistema inteligente de recomendaciones."
-            },
-            "enemNinja": {
-                "title": "Enem Ninja",
-                "subtitle": "App educativa con simulacros y gamificación para ENEM",
-                "description": "Desarrollado íntegramente por mí, desde el diseño hasta la programación. Creé simulacros interactivos, sistema de puntuación, seguimiento de progreso y una biblioteca de contenidos enfocada en rendimiento y engagement para estudiantes de ENEM."
-            },
-            "zapFacil": {
-                "title": "ZapFácil",
-                "subtitle": "Dashboard para automatización de mensajes vía WhatsApp Business",
-                "description": "Fui responsable del desarrollo del dashboard administrativo utilizando Vue.js. La interfaz permite configuración y monitoreo de campañas de mensajes automáticos, con enfoque en claridad, organización y responsividad."
-            },
-            "gerenciaMei": {
-                "title": "GestionaMEI",
-                "subtitle": "Plataforma de gestión simplificada para microemprendedores individuales",
-                "description": "Contribuí en la creación de las principales pantallas y flujos de la app, trabajando en equipo con enfoque en organización financiera, emisión de documentos y visualización de datos. Actué en la alineación entre frontend, backend y diseño."
-            },
-            "snaprix": {
-                "title": "Snaprix",
-                "subtitle": "Juego móvil adictivo estilo Tetris",
-                "description": "Juego móvil adictivo estilo Tetris desarrollado con Flutter"
-            },
-            "playlistPorter": {
-                "title": "PlaylistPorter Website",
-                "subtitle": "Landing page responsiva para transferencia de playlists",
-                "description": "Landing page responsiva para transferencia de playlists entre plataformas"
-            },
-            "petCare": {
-                "title": "PetCare Platform",
-                "subtitle": "Plataforma web para adopción y cuidado de mascotas",
-                "description": "Plataforma web para adopción y cuidado de mascotas desarrollada con HTML, CSS y JavaScript"
-            }
-        }
-    },
-    "timeline": {
-        "items": {
-            "frontendNext": "Desarrolladora Front End - Next",
-            "wordPressDev": "Desarrolladora WordPress",
-            "fullStackFreelancer": "Desarrolladora Full Stack - Freelancer",
-            "fullStackGeneration": "Desarrolladora Full Stack - Grupo Genneration",
-            "englishMalta": "Intercambio Académico – Curso intensivo de inglés (nivel B2)",
-            "businessSpain": "Estudio de Business y Mercado Internacional"
-        },
-        "locations": {
-            "remote": "Remoto",
-            "malta": "Malta",
-            "spain": "España"
-        }
-    },
-    "contact": {
-        "title": "Contáctame",
-        "firstName": "Nombre",
-        "lastName": "Apellido",
-        "email": "Correo Electrónico",
-        "message": "Mensaje",
-        "service": "Servicio",
-        "send": "Enviar Mensaje"
+    "items": {
+      "cartoesFacil": {
+        "title": "Tarjetas Fácil",
+        "subtitle": "App para comparación de tarjetas de crédito",
+        "description": "Participé como colaboradora en el desarrollo de Tarjetas Fácil, contribuyendo con mejoras e implementaciones en el frontend. Ayudé a crear componentes visuales reutilizables, responsividad y refinamiento de la experiencia de navegación, aplicando buenas prácticas de UI/UX."
+      },
+      "jogoBiblia": {
+        "title": "Juego de la Biblia: Estudio Diario",
+        "subtitle": "App de quiz bíblico con gamificación",
+        "description": "Realicé actualizaciones en la aplicación enfocándome en rendimiento, estabilidad e integración de anuncios. Optimicé el sistema de monetización (AdMob) y contribuí con ajustes de diseño y experiencia de usuario."
+      },
+      "caloTrack": {
+        "title": "CaloTrack: Monitor de Calorías",
+        "subtitle": "App de nutrición con IA para análisis alimentario y plan personalizado",
+        "description": "Desarrollé todo el frontend de la aplicación e implementé la integración con IA para análisis de imágenes y generación de planes personalizados. Creé funcionalidades como metas nutricionales, gráficos, diario alimentario, ingesta de agua y sistema inteligente de recomendaciones."
+      },
+      "enemNinja": {
+        "title": "Enem Ninja",
+        "subtitle": "App educativa con simulacros y gamificación para ENEM",
+        "description": "Desarrollado íntegramente por mí, desde el diseño hasta la programación. Creé simulacros interactivos, sistema de puntuación, seguimiento de progreso y una biblioteca de contenidos enfocada en rendimiento y engagement para estudiantes de ENEM."
+      },
+      "zapFacil": {
+        "title": "ZapFácil",
+        "subtitle": "Dashboard para automatización de mensajes vía WhatsApp Business",
+        "description": "Fui responsable del desarrollo del dashboard administrativo utilizando Vue.js. La interfaz permite configuración y monitoreo de campañas de mensajes automáticos, con enfoque en claridad, organización y responsividad."
+      },
+      "gerenciaMei": {
+        "title": "GestionaMEI",
+        "subtitle": "Plataforma de gestión simplificada para microemprendedores individuales",
+        "description": "Contribuí en la creación de las principales pantallas y flujos de la app, trabajando en equipo con enfoque en organización financiera, emisión de documentos y visualización de datos. Actué en la alineación entre frontend, backend y diseño."
+      },
+      "snaprix": {
+        "title": "Snaprix",
+        "subtitle": "Juego móvil adictivo estilo Tetris",
+        "description": "Juego móvil adictivo estilo Tetris desarrollado con Flutter"
+      },
+      "playlistPorter": {
+        "title": "PlaylistPorter Website",
+        "subtitle": "Landing page responsiva para transferencia de playlists",
+        "description": "Landing page responsiva para transferencia de playlists entre plataformas"
+      },
+      "petCare": {
+        "title": "PetCare Platform",
+        "subtitle": "Plataforma web para adopción y cuidado de mascotas",
+        "description": "Plataforma web para adopción y cuidado de mascotas desarrollada con HTML, CSS y JavaScript"
+      }
     }
+  },
+  "timeline": {
+    "items": {
+      "frontendNext": "Desarrolladora Front End - Next",
+      "wordPressDev": "Desarrolladora WordPress",
+      "fullStackFreelancer": "Desarrolladora Full Stack - Freelancer",
+      "fullStackGeneration": "Desarrolladora Full Stack - Grupo Genneration",
+      "englishMalta": "Intercambio Académico – Curso intensivo de inglés (nivel B2)",
+      "businessSpain": "Estudio de Business y Mercado Internacional"
+    },
+    "locations": {
+      "remote": "Remoto",
+      "malta": "Malta",
+      "spain": "España"
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "service": "Servicio",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "Mensaje enviado con éxito! Te responderé pronto.",
+    "errors": {
+      "nameTooShort": "El nombre debe tener al menos 2 caracteres",
+      "invalidEmail": "Por favor, ingrese un correo electrónico válido",
+      "messageTooShort": "El mensaje debe tener al menos 10 caracteres",
+      "submitFailed": "Error al enviar mensaje. Por favor, intente de nuevo.",
+      "networkError": "Error de red. Verifique su conexión."
+    }
+  }
 }

@@ -11,18 +11,18 @@
                 <div class="max-w-md w-full flex flex-col items-center space-y-6">
                     <div class="w-48 h-48 rounded-full overflow-hidden shadow-md">
                         <img :src="perfilImg"
-                            alt="Foto da Duda" class="w-full h-full object-cover" />
+                            alt="Foto da Duda" class="w-full h-full object-cover" loading="lazy" />
                     </div>
                     <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 text-center">
                         {{ t('about.subtitle') }}
                     </h2>
                     <div class="flex flex-wrap gap-2 justify-center w-full">
-                        <a href="https://www.linkedin.com/in/eduardaalvesfr/" target="_blank"
+                        <a href="https://www.linkedin.com/in/eduardaalvesfr/" target="_blank" rel="noopener noreferrer"
                             class="group bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded-lg flex items-center gap-2 transition-all hover:scale-105 hover:text-purple-600">
                             <font-awesome-icon :icon="['fab', 'linkedin']" class="text-purple-600" />
                             Linkedin
                         </a>
-                        <a href="https://github.com/MariaEduardaaf" target="_blank"
+                        <a href="https://github.com/MariaEduardaaf" target="_blank" rel="noopener noreferrer"
                             class="group bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded-lg flex items-center gap-2 transition-all hover:scale-105 hover:text-purple-600">
                             <font-awesome-icon :icon="['fab', 'github']" class="text-purple-600" />
                             Github
@@ -55,7 +55,7 @@
                             <div v-for="tech in skills" :key="tech.name"
                                 class="skill-card relative flex items-center justify-center w-[70px] h-[70px] bg-gray-100 dark:bg-gray-700 rounded-md cursor-pointer"
                                 @mouseenter="onHover" @mouseleave="onLeave">
-                                <img :src="tech.icon" :alt="tech.name" class="w-10 h-10" />
+                                <img :src="tech.icon" :alt="tech.name" class="w-10 h-10" loading="lazy" />
                                 <div class="tooltip">{{ tech.name }}</div>
                             </div>
                         </div>

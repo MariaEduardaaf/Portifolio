@@ -15,11 +15,11 @@
           {{ t('hero.name') }}
         </h2>
         <div class="flex space-x-4 text-xl">
-          <a href="https://www.linkedin.com/in/eduardaalvesfr/" target="_blank">
+          <a href="https://www.linkedin.com/in/eduardaalvesfr/" target="_blank" rel="noopener noreferrer">
             <font-awesome-icon :icon="['fab', 'linkedin']"
               class="w-6 h-6 hover:text-blue-600 transition-transform transform hover:scale-110" />
           </a>
-          <a href="https://github.com/MariaEduardaaf" target="_blank">
+          <a href="https://github.com/MariaEduardaaf" target="_blank" rel="noopener noreferrer">
             <font-awesome-icon :icon="['fab', 'github']"
               class="w-6 h-6 hover:text-gray-700 transition-transform transform hover:scale-110" />
           </a>
@@ -38,33 +38,34 @@
       <div class="flex flex-col items-start dark:text-gray-100 text-gray-900 space-y-4 w-full md:w-1/3">
         <div class="flex space-x-4">
           <!-- Vue.js -->
-          <img class="w-6 h-6 transition-transform transform hover:scale-110" 
-               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" 
+          <img class="w-6 h-6 transition-transform transform hover:scale-110"
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
                alt="Vue.js" />
-          
+
           <!-- Flutter -->
-          <img class="w-6 h-6 transition-transform transform hover:scale-110" 
-               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" 
+          <img class="w-6 h-6 transition-transform transform hover:scale-110"
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
                alt="Flutter" />
-          
+
           <!-- Node.js -->
-          <img class="w-6 h-6 transition-transform transform hover:scale-110" 
-               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" 
+          <img class="w-6 h-6 transition-transform transform hover:scale-110"
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                alt="Node.js" />
-          
+
           <!-- PostgreSQL -->
-          <img class="w-6 h-6 transition-transform transform hover:scale-110" 
-               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" 
+          <img class="w-6 h-6 transition-transform transform hover:scale-110"
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
                alt="PostgreSQL" />
-          
+
           <!-- Firebase -->
-          <img class="w-6 h-6 transition-transform transform hover:scale-110" 
-               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" 
+          <img class="w-6 h-6 transition-transform transform hover:scale-110"
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
                alt="Firebase" />
         </div>
-        <!-- Quebra de linha entre palavras da role -->
+        <!-- Typing Animation para Role -->
         <p class="text-2xl md:text-3xl font-normal leading-tight">
-          {{ t('hero.role').split(' ')[0] }}<br>{{ t('hero.role').split(' ').slice(1).join(' ') }}
+          <span class="typing-text">{{ displayedRole }}</span>
+          <span class="typing-cursor">|</span>
         </p>
       </div>
     </div>
@@ -80,11 +81,86 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import perfilImg from '../assets/img/perfil.png'
+
 const { t } = useI18n()
+
+// Typing Animation
+const roles = [
+  'Full Stack Developer',
+  'Flutter Developer',
+  'Vue.js Developer',
+  'Mobile Developer'
+]
+
+const currentRoleIndex = ref(0)
+const currentCharIndex = ref(0)
+const isDeleting = ref(false)
+const displayedRole = ref('')
+
+let typingInterval = null
+const typingSpeed = 100
+const deletingSpeed = 50
+const pauseAfterTyping = 2000
+const pauseAfterDeleting = 500
+
+function typeRole() {
+  const currentRole = roles[currentRoleIndex.value]
+
+  if (!isDeleting.value) {
+    // Digitando
+    if (currentCharIndex.value < currentRole.length) {
+      displayedRole.value = currentRole.substring(0, currentCharIndex.value + 1)
+      currentCharIndex.value++
+      typingInterval = setTimeout(typeRole, typingSpeed)
+    } else {
+      // Terminou de digitar, espera e começa a apagar
+      typingInterval = setTimeout(() => {
+        isDeleting.value = true
+        typeRole()
+      }, pauseAfterTyping)
+    }
+  } else {
+    // Apagando
+    if (currentCharIndex.value > 0) {
+      displayedRole.value = currentRole.substring(0, currentCharIndex.value - 1)
+      currentCharIndex.value--
+      typingInterval = setTimeout(typeRole, deletingSpeed)
+    } else {
+      // Terminou de apagar, passa para próxima role
+      isDeleting.value = false
+      currentRoleIndex.value = (currentRoleIndex.value + 1) % roles.length
+      typingInterval = setTimeout(typeRole, pauseAfterDeleting)
+    }
+  }
+}
+
+onMounted(() => {
+  typeRole()
+})
+
+onUnmounted(() => {
+  if (typingInterval) {
+    clearTimeout(typingInterval)
+  }
+})
 </script>
 
 <style scoped>
-/* estilos scoped se necessário */
+.typing-cursor {
+  animation: blink 1s infinite;
+  font-weight: 100;
+  color: #9333ea;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
 </style>

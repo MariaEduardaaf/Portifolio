@@ -8,6 +8,16 @@
     <ContactSection />
   </main>
 
+  <!-- Botão voltar ao topo -->
+  <button
+    v-show="showBackToTop"
+    @click="scrollToTop"
+    class="fixed bottom-24 right-6 p-3 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 hover:scale-110 transition-all duration-300 z-50"
+    aria-label="Voltar ao topo"
+  >
+    <font-awesome-icon icon="arrow-up" class="w-5 h-5" />
+  </button>
+
   <!-- Controles fixos: tema e idioma -->
   <div class="fixed bottom-6 right-6 flex items-center space-x-4 z-50">
     <!-- Ícone de tema -->
@@ -71,23 +81,47 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, defineAsyncComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import HeroSection from '../components/HeroSection.vue'
-import AboutSection from '../components/AboutSection.vue'
-import ProjectsSection from '../components/ProjectsSection.vue'
-import ContactSection from '../components/ContactSection.vue'
+
+// Lazy loading de componentes abaixo da dobra
+const AboutSection = defineAsyncComponent(() =>
+  import('../components/AboutSection.vue')
+)
+const ProjectsSection = defineAsyncComponent(() =>
+  import('../components/ProjectsSection.vue')
+)
+const ContactSection = defineAsyncComponent(() =>
+  import('../components/ContactSection.vue')
+)
 
 const showLang = ref(false)
 const isDark = ref(false)
+const showBackToTop = ref(false)
 
 const { locale } = useI18n()
+
+function handleScroll() {
+  showBackToTop.value = window.scrollY > 400
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 
 onMounted(() => {
   // Inicializa tema a partir do localStorage
   isDark.value = localStorage.getItem('theme') === 'dark'
   document.documentElement.classList.toggle('dark', isDark.value)
+
+  // Listener para mostrar/esconder botão voltar ao topo
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 
 function toggleTheme() {

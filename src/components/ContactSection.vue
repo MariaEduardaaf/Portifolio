@@ -6,7 +6,7 @@
                 {{ t('contact.title') }}
             </h1>
 
-            <form action="https://formspree.io/f/xvgryqog" method="POST" @submit="formatMessage"
+            <form @submit="handleSubmit"
                 class="contact-card group bg-white dark:bg-gray-800 p-10 rounded-xl shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
                 <div class="grid grid-cols-2 gap-4 animate-slide-up">
                     <div>
@@ -74,12 +74,36 @@
                     </div>
                 </div>
 
-                <!-- Campo hidden para a mensagem formatada -->
-                <input type="hidden" name="formatted_message" id="formatted_message">
+                <!-- Mensagem de erro -->
+                <div v-if="submitStatus === 'error'"
+                     class="mt-4 p-4 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-400 rounded-lg animate-slide-up">
+                    {{ errorMessage }}
+                </div>
+
+                <!-- Mensagem de sucesso -->
+                <div v-if="submitStatus === 'success'"
+                     class="mt-4 p-4 bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-400 rounded-lg animate-slide-up">
+                    {{ t('contact.success') }}
+                </div>
 
                 <button type="submit"
-                    class="mt-8 w-full py-3 rounded-lg font-semibold transition-all transform hover:-translate-y-1 shadow-md animate-slide-up bg-purple-600 text-white hover:bg-purple-700">
-                    {{ t('contact.send') }} <span class="ml-2">→</span>
+                    :disabled="isSubmitting"
+                    :class="[
+                        'mt-8 w-full py-3 rounded-lg font-semibold transition-all transform shadow-md animate-slide-up',
+                        isSubmitting
+                            ? 'bg-gray-400 cursor-not-allowed'
+                            : 'bg-purple-600 text-white hover:bg-purple-700 hover:-translate-y-1'
+                    ]">
+                    <span v-if="isSubmitting" class="flex items-center justify-center gap-2">
+                        <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        {{ t('contact.sending') }}
+                    </span>
+                    <span v-else>
+                        {{ t('contact.send') }} <span class="ml-2">→</span>
+                    </span>
                 </button>
             </form>
         </div>
@@ -87,28 +111,99 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-function formatMessage(event) {
-    const firstName = document.getElementById('firstName').value
-    const lastName = document.getElementById('lastName').value
-    const email = document.getElementById('email').value
-    const originalMessage = document.getElementById('message').value
-    const service = document.querySelector('input[name="service"]:checked').value
-    
-    const formattedMessage = `✉️ New Contact Form Submission
+const isSubmitting = ref(false)
+const submitStatus = ref(null) // 'success' | 'error' | null
+const errorMessage = ref('')
 
-👤 Name: ${firstName} ${lastName}
-📧 Email: ${email}
-🔧 Service Interest: ${service} Development
-💬 Message: ${originalMessage}
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return re.test(email)
+}
+
+function sanitizeInput(str) {
+    return str.replace(/<[^>]*>/g, '').trim()
+}
+
+async function handleSubmit(event) {
+    event.preventDefault()
+
+    const firstName = sanitizeInput(document.getElementById('firstName').value)
+    const lastName = sanitizeInput(document.getElementById('lastName').value)
+    const email = sanitizeInput(document.getElementById('email').value)
+    const originalMessage = sanitizeInput(document.getElementById('message').value)
+    const service = document.querySelector('input[name="service"]:checked').value
+
+    // Validacao
+    if (firstName.length < 2) {
+        errorMessage.value = t('contact.errors.nameTooShort')
+        submitStatus.value = 'error'
+        return
+    }
+
+    if (!validateEmail(email)) {
+        errorMessage.value = t('contact.errors.invalidEmail')
+        submitStatus.value = 'error'
+        return
+    }
+
+    if (originalMessage.length < 10) {
+        errorMessage.value = t('contact.errors.messageTooShort')
+        submitStatus.value = 'error'
+        return
+    }
+
+    isSubmitting.value = true
+    submitStatus.value = null
+
+    const formattedMessage = `New Contact Form Submission
+
+Name: ${firstName} ${lastName}
+Email: ${email}
+Service Interest: ${service} Development
+Message: ${originalMessage}
 
 ---
 Sent from Portfolio Contact Form`
-    
-    document.getElementById('formatted_message').value = formattedMessage
+
+    const formData = new FormData()
+    formData.append('firstName', firstName)
+    formData.append('lastName', lastName)
+    formData.append('email', email)
+    formData.append('message', originalMessage)
+    formData.append('service', service)
+    formData.append('formatted_message', formattedMessage)
+
+    try {
+        const response = await fetch('https://formspree.io/f/xvgryqog', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+
+        if (response.ok) {
+            submitStatus.value = 'success'
+            // Limpar formulario
+            document.getElementById('firstName').value = ''
+            document.getElementById('lastName').value = ''
+            document.getElementById('email').value = ''
+            document.getElementById('message').value = ''
+        } else {
+            submitStatus.value = 'error'
+            errorMessage.value = t('contact.errors.submitFailed')
+        }
+    } catch (error) {
+        submitStatus.value = 'error'
+        errorMessage.value = t('contact.errors.networkError')
+    } finally {
+        isSubmitting.value = false
+    }
 }
 </script>
 
