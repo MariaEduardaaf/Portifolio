@@ -179,7 +179,7 @@ Sent from Portfolio Contact Form`
     formData.append('formatted_message', formattedMessage)
 
     try {
-        const response = await fetch('https://formspree.io/f/xvgryqog', {
+        const response = await fetch('https://formspree.io/f/xkobjaew', {
             method: 'POST',
             body: formData,
             headers: {
